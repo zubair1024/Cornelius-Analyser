@@ -662,7 +662,7 @@ Partial Class Form2
         Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.ClientSize = New System.Drawing.Size(1080, 1050)
+        Me.ClientSize = New System.Drawing.Size(632, 438)
         Me.Controls.Add(Me.Label54)
         Me.Controls.Add(Me.Label55)
         Me.Controls.Add(Me.Label56)

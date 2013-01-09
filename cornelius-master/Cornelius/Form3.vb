@@ -20,8 +20,31 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
         Next
         Return
     End Sub
+    Public Structure studentobject
+        Dim rollno As String
+        Dim sname As String
+        Dim temp As String
+        Dim Subject() As String
+        Dim SubjectC() As String
+        Dim SubjectA() As String
+        Dim SubjectE() As String
+        Dim SubjectT() As String
+        Dim Aggregate As String
+        Dim TPercent As String
+        Dim Result As String
+        Dim scount As Integer
 
-    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    End Structure
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
+    Public Sub New(ByVal Studobjects() As Form2.studentobject, ByVal studcount As Integer)
+        InitializeComponent()
 
         Dim loopy As Integer
 
@@ -40,6 +63,10 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
         Label9.Text = count2.ToString
         Label10.Text = count3.ToString
         Label11.Text = count4.ToString
+
+    End Sub
+
+    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
