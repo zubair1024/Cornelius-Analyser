@@ -32,7 +32,8 @@ Public Class PdfManipulation2
 
         Public Sub New()
             MyBase.New()
-        End Sub
+
+End Sub
 
         Public Sub New(ByVal pageSize As iTextSharp.text.Rectangle)
             MyBase.New(pageSize)
