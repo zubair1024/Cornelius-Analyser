@@ -9,6 +9,8 @@ Public Class Form2
     Dim studcount As Integer = 0
     Dim minsub() As Integer
     Dim maxsub() As Integer
+    Dim avgsub() As Integer
+    Dim sumsub() As Integer
     Dim indexx As Integer = -1
 
     Private Sub Browsebtn_Click(sender As Object, e As EventArgs) Handles Browsebtn.Click
@@ -254,6 +256,8 @@ step1:      Dim j As Integer = Studobjects(i).temp.IndexOf(dept)
         Dim minsub() As String
         ReDim Preserve minsub(Studobjects(0).Subject.Length)
         ReDim Preserve maxsub(Studobjects(0).Subject.Length)
+        ReDim Preserve sumsub(Studobjects(0).Subject.Length)
+        ReDim Preserve avgsub(Studobjects(0).Subject.Length)
         For k = 0 To Studobjects(0).Subject.Length Step 1
             minsub(k) = Studobjects(0).SubjectT(k)
         Next
@@ -273,6 +277,19 @@ step1:      Dim j As Integer = Studobjects(i).temp.IndexOf(dept)
                 End If
             Next
         Next
+
+        'For z = 0 To Studobjects(0).Subject.Length Step 1
+        'sumsub(z) = 0
+        ' Next
+
+        'For k = 0 To studcount - 1 Step 1
+        For z = 0 To Studobjects(0).Subject.Length Step 1
+            For k = 0 To studcount - 1 Step 1
+                sumsub(z) = sumsub(z) + Studobjects(k).SubjectT(z)
+            Next
+            avgsub(z) = (sumsub(z) / studcount)
+        Next
+
         Label40.Text = Studobjects(0).Subject(0)
         Label41.Text = Studobjects(0).Subject(1)
         Label42.Text = Studobjects(0).Subject(2)
@@ -309,6 +326,15 @@ step1:      Dim j As Integer = Studobjects(i).temp.IndexOf(dept)
         Label29.Text = maxsub(6)
         Label30.Text = maxsub(7)
 
+        Label64.Text = avgsub(0)
+        Label63.Text = avgsub(1)
+        Label62.Text = avgsub(2)
+        Label61.Text = avgsub(3)
+        Label60.Text = avgsub(4)
+        Label59.Text = avgsub(5)
+        Label58.Text = avgsub(6)
+        Label57.Text = avgsub(7)
+
 
     End Sub
     Public Function ReadPdfFile(ByVal fileName As String)
@@ -331,16 +357,88 @@ step1:      Dim j As Integer = Studobjects(i).temp.IndexOf(dept)
     End Function
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
-
+        Dim PF As Integer = 0
+        Dim D As Integer = 0
+        Dim no As Integer = 0
         indexx = ListBox1.SelectedIndex()
+        Label53.ForeColor = SystemColors.ControlText
+        Label52.ForeColor = SystemColors.ControlText
+        Label51.ForeColor = SystemColors.ControlText
+        Label50.ForeColor = SystemColors.ControlText
+        Label49.ForeColor = SystemColors.ControlText
+        Label48.ForeColor = SystemColors.ControlText
+        Label56.ForeColor = SystemColors.ControlText
+        Label55.ForeColor = SystemColors.ControlText
+        Label66.ForeColor = SystemColors.ControlText
+
+
         Label53.Text = Studobjects(indexx).SubjectT(0)
+        If Studobjects(indexx).SubjectT(0) < 40 Then
+            PF = 1
+            Label53.ForeColor = Color.Red
+            Label53.Text = Studobjects(indexx).SubjectT(0) + "*"
+        End If
         Label52.Text = Studobjects(indexx).SubjectT(1)
+        If Studobjects(indexx).SubjectT(1) < 40 Then
+            PF = 1
+            Label52.ForeColor = Color.Red
+            Label52.Text = Studobjects(indexx).SubjectT(1) + "*"
+        End If
         Label51.Text = Studobjects(indexx).SubjectT(2)
+        If Studobjects(indexx).SubjectT(2) < 40 Then
+            PF = 1
+            Label51.ForeColor = Color.Red
+            Label51.Text = Studobjects(indexx).SubjectT(2) + "*"
+        End If
         Label50.Text = Studobjects(indexx).SubjectT(3)
+        If Studobjects(indexx).SubjectT(3) < 40 Then
+            PF = 1
+            Label50.ForeColor = Color.Red
+            Label50.Text = Studobjects(indexx).SubjectT(3) + "*"
+        End If
         Label49.Text = Studobjects(indexx).SubjectT(4)
+        If Studobjects(indexx).SubjectT(4) < 40 Then
+            PF = 1
+            Label49.ForeColor = Color.Red
+            Label49.Text = Studobjects(indexx).SubjectT(4) + "*"
+        End If
         Label48.Text = Studobjects(indexx).SubjectT(5)
+        If Studobjects(indexx).SubjectT(5) < 40 Then
+            PF = 1
+            Label48.ForeColor = Color.Red
+            Label48.Text = Studobjects(indexx).SubjectT(5) + "*"
+        End If
         Label56.Text = Studobjects(indexx).SubjectT(6)
+        If Studobjects(indexx).SubjectT(6) < 40 Then
+            PF = 1
+            Label56.ForeColor = Color.Red
+            Label56.Text = Studobjects(indexx).SubjectT(6) + "*"
+        End If
         Label55.Text = Studobjects(indexx).SubjectT(7)
+        If Studobjects(indexx).SubjectT(7) < 40 Then
+            PF = 1
+            Label55.ForeColor = Color.Red
+            Label55.Text = Studobjects(indexx).SubjectT(7) + "*"
+        End If
+
+        'For no = 0 To Studobjects(indexx).Subject.Length
+        ' If Studobjects(indexx).SubjectT(no) < 40 Then
+        'PF = 1
+        ' End If
+        'Next
+        Label39.Text = "TOTAL"
+        Label67.Text = "RESULT"
+        If PF = 1 Then
+            Label66.ForeColor = Color.Red
+            Label66.Text = Studobjects(indexx).Result
+            'Label54.ForeColor = Color.Red
+            Label54.Text = Studobjects(indexx).TPercent + "%"
+        Else
+            Label66.ForeColor = Color.Green
+            Label66.Text = Studobjects(indexx).Result
+            'Label54.ForeColor = Color.Green
+            Label54.Text = Studobjects(indexx).TPercent + "%"
+        End If
 
     End Sub
 

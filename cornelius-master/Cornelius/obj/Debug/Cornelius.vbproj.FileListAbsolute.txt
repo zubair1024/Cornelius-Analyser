@@ -44,18 +44,3 @@ C:\Users\abcd\Documents\Visual Studio 2012\Projects\cornelius-master\Cornelius\o
 C:\Users\abcd\Documents\Visual Studio 2012\Projects\cornelius-master\Cornelius\obj\Debug\WindowsApplication1.Resources.resources
 C:\Users\abcd\Documents\Visual Studio 2012\Projects\cornelius-master\Cornelius\obj\Debug\WindowsApplication1.SplashScreen1.resources
 C:\Users\abcd\Documents\Visual Studio 2012\Projects\cornelius-master\Cornelius\obj\Debug\Cornelius.vbproj.GenerateResource.Cache
-C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\bin\Debug\Cornelius.exe.config
-C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\Cornelius.exe
-C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\Cornelius.xml
-C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\Cornelius.pdb
-C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\bin\Debug\Cornelius.exe
-C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\bin\Debug\Cornelius.pdb
-C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\bin\Debug\Cornelius.xml
-C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\bin\Debug\itextsharp.dll
-C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\Cornelius.vbprojResolveAssemblyReference.cache
-C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\WindowsApplication1.Form1.resources
-C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\WindowsApplication1.Form2.resources
-C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\WindowsApplication1.Form3.resources
-C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\WindowsApplication1.Resources.resources
-C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\WindowsApplication1.SplashScreen1.resources
-C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\Cornelius.vbproj.GenerateResource.Cache
