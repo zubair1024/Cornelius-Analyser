@@ -10,6 +10,8 @@
     Dim count4percent As Single = 0
     Dim passpercent As Single = 0
     Dim failpercent As Single = 0
+    Dim Passlocal, Faillocal As Integer
+
 
     Public Sub DrawPieChart(ByVal percents() As Integer, ByVal colors() As Color, _
 ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
@@ -79,10 +81,12 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
         Label10.Text = count3.ToString
         Label11.Text = count4.ToString
 
-        passpercent = 100 * (Pass / totall)
-        passpercent = 100 * (Fail / totall)
-        Label14.Text = Pass
-        Label15.Text = Fail
+        'passpercent = 100 * (Pass / totall)
+        'passpercent = 100 * (Fail / totall)
+        Passlocal = Form2.Pass
+        Faillocal = Form2.Fail
+        Label14.Text = Passlocal
+        Label15.Text = Faillocal
 
         totall = count1 + count2 + count3 + count4
         count1percent = 100 * (count1 / totall)
@@ -104,10 +108,10 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
         Dim percents() As Integer = {count1percent.ToString, count2percent.ToString, count3percent.ToString, count4percent.ToString}
         Dim colors() As Color = {Color.Blue, Color.Green, Color.Red, Color.Yellow}
         Dim graphics As Graphics = Me.CreateGraphics
-        Dim location As Point = New Point(350, 50)
+        Dim location As Point = New Point(350, 20)
         Dim size As Size = New Size(200, 200)
         DrawPieChart(percents, colors, graphics, location, size)
-        Label1.Text = "Pie Chart"
+        'Label1.Text = "Pie Chart"
     End Sub
 
 
@@ -512,5 +516,20 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
             DrawPieChart(percents, colors, graphics, location, size)
             Label1.Text = "Pie Chart"
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Passlocal = Form2.Pass
+        Faillocal = Form2.Fail
+        totall = Passlocal + Faillocal
+        passpercent = 100 * (Passlocal / totall)
+        failpercent = 100 * (Faillocal / totall)
+        Dim percents() As Integer = {passpercent.ToString, failpercent.ToString}
+        Dim colors() As Color = {Color.Purple, Color.Orchid}
+        Dim graphics As Graphics = Me.CreateGraphics
+        Dim location As Point = New Point(350, 248)
+        Dim size As Size = New Size(200, 200)
+        DrawPieChart(percents, colors, graphics, location, size)
+        'Label1.Text = "Pie Chart"
     End Sub
 End Class

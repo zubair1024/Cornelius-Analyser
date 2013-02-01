@@ -1,11 +1,12 @@
 ﻿Imports iTextSharp.text.pdf
 Imports System.IO
+
 Public Class Form2
     Dim headers As String
     Dim Studobjects(200) As studentobject
     Dim dept As String
-    Dim Pass As Integer = 0
-    Dim Fail As Integer = 0
+    Public Pass As Integer = 0
+    Public Fail As Integer = 0
     Dim studcount As Integer = 0
     Dim minsub() As Integer
     Dim maxsub() As Integer
@@ -24,9 +25,9 @@ Public Class Form2
             Dim data As String = ""
             Dim tempdata As String
             tempdata = ReadPdfFile(OpenFileDialog1.FileName)
-            Dim fwrite As New StreamWriter("C:\Web\test.txt")
-            fwrite.Write(tempdata)
-            fwrite.Close()
+            'For debug only Dim fwrite As New StreamWriter("C:\Web\test.txt")
+            'fwrite.Write(tempdata)
+            'fwrite.Close()
             ParseToObjects(tempdata)
             TextBox1.Text = sourcePdf.ToString
         End If
@@ -50,6 +51,17 @@ Public Class Form2
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+    Public Function countsubjects(ByVal rawdata As String)
+        Dim subcount As Integer = 0
+        rawdata = rawdata.Substring(0, rawdata.IndexOf("Register"))
+        Dim i As Integer = rawdata.IndexOf("Subject")
+        i = i + 1
+        While i > 0
+            i = rawdata.IndexOf("Subject", i + 1)
+            subcount = subcount + 1
+        End While
+        Return subcount
+    End Function
     Public Sub ParseToObjects(ByVal rawdata As String)
         Dim i As Integer
 
@@ -65,8 +77,8 @@ Public Class Form2
         i = rawdata.IndexOf(dept)
         Dim j As Integer = 0
         Dim k As Integer = 0
-
-        While (i <> -1)
+         Dim l As Integer = rawdata.IndexOf("Total Mark")
+        While (l <> -1)
             k = rawdata.IndexOf("CIA")
             If k = -1 Then
                 GoTo skip
@@ -82,6 +94,7 @@ Public Class Form2
             rawdata = rawdata.Substring(k - 9)
             j = j + 1
             i = rawdata.IndexOf(dept)
+            l = rawdata.IndexOf("Total Mark")
         End While
 
 skip:   Label10.Text = j.ToString
@@ -132,31 +145,31 @@ step1:      Dim j As Integer = Studobjects(i).temp.IndexOf(dept)
                         Fail = Fail + 1
 
                         If k > j Then
-                            Studobjects(i).TPercent = Studobjects(i).temp.Substring(0, j)
+                            '  Studobjects(i).TPercent = Studobjects(i).temp.Substring(0, j)
 
                         Else
-                            Studobjects(i).TPercent = Studobjects(i).temp.Substring(k + 3, j - (k + 3))
+                            'Studobjects(i).TPercent = Studobjects(i).temp.Substring(k + 3, j - (k + 3))
 
                         End If
                         Studobjects(i).temp = Studobjects(i).temp.Substring(Studobjects(i).temp.IndexOf("AILED") + 5)
                     Else
                         Studobjects(i).Result = "Pass Class"
                         k = Studobjects(i).temp.IndexOf("MAX")
-                        Studobjects(i).TPercent = Studobjects(i).temp.Substring(k + 3, j - (k + 3))
+                        'Studobjects(i).TPercent = Studobjects(i).temp.Substring(k + 3, j - (k + 3))
                         Pass = Pass + 1
                         Studobjects(i).temp = Studobjects(i).temp.Substring(Studobjects(i).temp.IndexOf("Class") + 5)
                     End If
                 Else
                     Studobjects(i).Result = "First Class"
                     k = Studobjects(i).temp.IndexOf("MAX")
-                    Studobjects(i).TPercent = Studobjects(i).temp.Substring(k + 3, j - (k + 3))
+                    'Studobjects(i).TPercent = Studobjects(i).temp.Substring(k + 3, j - (k + 3))
                     Pass = Pass + 1
                     Studobjects(i).temp = Studobjects(i).temp.Substring(Studobjects(i).temp.IndexOf("Class") + 5)
                 End If
             Else
                 Studobjects(i).Result = "Distinction"
                 k = Studobjects(i).temp.IndexOf("MAX")
-                Studobjects(i).TPercent = Studobjects(i).temp.Substring(k + 3, j - (k + 3))
+                'Studobjects(i).TPercent = Studobjects(i).temp.Substring(k + 3, j - (k + 3))
                 Pass = Pass + 1
                 Studobjects(i).temp = Studobjects(i).temp.Substring(Studobjects(i).temp.IndexOf("ction") + 5)
 
@@ -231,19 +244,37 @@ step1:      Dim j As Integer = Studobjects(i).temp.IndexOf(dept)
                     Studobjects(i).SubjectA(k) = "0"
                 End If
             Next
-
             For k = 0 To Studobjects(i).scount - 1 Step 1
-                Studobjects(i).SubjectT(k) = Integer.Parse(Studobjects(i).SubjectA(k)) + Integer.Parse(Studobjects(i).SubjectC(k)) + Integer.Parse(Studobjects(i).SubjectE(k))
+                Dim temp(3) As Integer
+                If Studobjects(i).SubjectA(k) = "AA" Then
+                    temp(0) = 0
+                Else
+                    temp(0) = Integer.Parse(Studobjects(i).SubjectA(k))
+                End If
+                If Studobjects(i).SubjectC(k) = "AA" Then
+                    temp(1) = 0
+                Else
+                    temp(1) = Integer.Parse(Studobjects(i).SubjectC(k))
+                End If
+                If Studobjects(i).SubjectE(k) = "AA" Then
+                    temp(2) = 0
+                Else
+                    temp(2) = Integer.Parse(Studobjects(i).SubjectE(k))
+                End If
+
+                Studobjects(i).SubjectT(k) = temp(0) + temp(1) + temp(2)
                 'j = Studobjects(i).temp.IndexOf(" ")
                 'Studobjects(i).SubjectT(k) = Studobjects(i).temp.Substring(0, j)
                 'Studobjects(i).temp = Studobjects(i).temp.Substring(j)
                 'Studobjects(i).temp = Studobjects(i).temp.TrimStart()
                 'j = Studobjects(i).temp.IndexOf(" ")
                 'Studobjects(i).temp = Studobjects(i).temp.Substring(j + 1)
+                Studobjects(i).TPercent = (Studobjects(i).Aggregate / (Studobjects(i).scount * 100)) * 100
 
 
 
             Next
+            
 
         Next
         Label11.Text = Pass
@@ -261,7 +292,7 @@ step1:      Dim j As Integer = Studobjects(i).temp.IndexOf(dept)
         For k = 0 To Studobjects(0).Subject.Length Step 1
             minsub(k) = Studobjects(0).SubjectT(k)
         Next
-        
+
         Dim z As Integer = 0
         For z = 0 To Studobjects(0).Subject.Length Step 1
             For k = 0 To studcount - 1 Step 1
@@ -361,6 +392,9 @@ step1:      Dim j As Integer = Studobjects(i).temp.IndexOf(dept)
         Dim D As Integer = 0
         Dim no As Integer = 0
         indexx = ListBox1.SelectedIndex()
+        If ListBox1.Items.Count = 1 Then
+            indexx = 0
+        End If
         Label53.ForeColor = SystemColors.ControlText
         Label52.ForeColor = SystemColors.ControlText
         Label51.ForeColor = SystemColors.ControlText
@@ -479,6 +513,20 @@ step1:      Dim j As Integer = Studobjects(i).temp.IndexOf(dept)
         Label21.Text = "-"
         Label22.Text = "-"
 
+        Label64.Text = "-"
+        Label63.Text = "-"
+        Label62.Text = "-"
+        Label61.Text = "-"
+        Label60.Text = "-"
+        Label59.Text = "-"
+        Label58.Text = "-"
+        Label57.Text = "-"
+
+        Label66.Text = "-"
+        Label67.Text = "-"
+        Label54.Text = "-"
+        Label39.Text = "-"
+
         Label23.Text = "-"
         Label24.Text = "-"
         Label25.Text = "-"
@@ -495,7 +543,7 @@ step1:      Dim j As Integer = Studobjects(i).temp.IndexOf(dept)
         Label14.Text = "-"
 
         TextBox1.Text = ""
-      
+
         ListBox1.Items.Clear()
 
 

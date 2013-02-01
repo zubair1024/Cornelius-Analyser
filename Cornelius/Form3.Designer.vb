@@ -146,7 +146,7 @@ Partial Class Form3
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(42, 340)
+        Me.Button1.Location = New System.Drawing.Point(42, 341)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(213, 29)
         Me.Button1.TabIndex = 13
@@ -244,7 +244,7 @@ Partial Class Form3
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(34, 494)
+        Me.Label12.Location = New System.Drawing.Point(34, 571)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(210, 20)
         Me.Label12.TabIndex = 24
@@ -253,7 +253,7 @@ Partial Class Form3
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(43, 525)
+        Me.Label13.Location = New System.Drawing.Point(43, 602)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(200, 20)
         Me.Label13.TabIndex = 25
@@ -262,7 +262,7 @@ Partial Class Form3
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(250, 494)
+        Me.Label14.Location = New System.Drawing.Point(250, 571)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(14, 20)
         Me.Label14.TabIndex = 26
@@ -271,7 +271,7 @@ Partial Class Form3
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(249, 525)
+        Me.Label15.Location = New System.Drawing.Point(249, 602)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(14, 20)
         Me.Label15.TabIndex = 27
@@ -279,7 +279,7 @@ Partial Class Form3
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(42, 570)
+        Me.Button2.Location = New System.Drawing.Point(42, 647)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(213, 29)
         Me.Button2.TabIndex = 28
@@ -290,7 +290,7 @@ Partial Class Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(867, 691)
+        Me.ClientSize = New System.Drawing.Size(1340, 944)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label14)
