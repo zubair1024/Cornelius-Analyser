@@ -25,9 +25,10 @@ Public Class Form2
             Dim data As String = ""
             Dim tempdata As String
             tempdata = ReadPdfFile(OpenFileDialog1.FileName)
-            'For debug only Dim fwrite As New StreamWriter("C:\Web\test.txt")
-            'fwrite.Write(tempdata)
-            'fwrite.Close()
+            'For debug only 
+            Dim fwrite As New StreamWriter("C:\Web\test.txt")
+            fwrite.Write(tempdata)
+            fwrite.Close()
             ParseToObjects(tempdata)
             TextBox1.Text = sourcePdf.ToString
         End If

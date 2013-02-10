@@ -105,418 +105,41 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim percents() As Integer = {count1percent.ToString, count2percent.ToString, count3percent.ToString, count4percent.ToString}
-        Dim colors() As Color = {Color.Blue, Color.Green, Color.Red, Color.Yellow}
-        Dim graphics As Graphics = Me.CreateGraphics
-        Dim location As Point = New Point(350, 20)
-        Dim size As Size = New Size(200, 200)
-        DrawPieChart(percents, colors, graphics, location, size)
+        ''Dim percents() As Integer = {count1percent.ToString, count2percent.ToString, count3percent.ToString, count4percent.ToString}
+        '' Dim colors() As Color = {Color.Blue, Color.Green, Color.Red, Color.Yellow}
+        'Dim graphics As Graphics = Me.CreateGraphics
+        'Dim location As Point = New Point(350, 20)
+        ' Dim size As Size = New Size(200, 200)
+        'DrawPieChart(percents, colors, graphics, location, size)
         'Label1.Text = "Pie Chart"
+        'Label23.Text = Label8.Text
+        'Label24.Text = Label9.Text
+        'Label25.Text = Label10.Text
+        'Label26.Text = Label11.Text
+        Chart1.Series(0).Points.Add(Label8.Text.ToString)
+        Chart1.Series(0).Label = ">80"
+        Chart1.Series(1).Points.Add(Label9.Text.ToString)
+        Chart1.Series(1).Label = "75-80"
+        Chart1.Series(2).Points.Add(Label10.Text.ToString)
+        Chart1.Series(2).Label = "60-75"
+        Chart1.Series(3).Points.Add(Label11.Text.ToString)
+        Chart1.Series(3).Label = "<60"
+
+        Chart3.Series(0).Points.Add(Label8.Text.ToString)
+        Chart3.Series(0).Points.Last.Label = ">80"
+        Chart3.Series(0).Points.Add(Label9.Text.ToString)
+        Chart3.Series(0).Points.Last.Label = "75-80"
+        Chart3.Series(0).Points.Add(Label10.Text.ToString)
+        Chart3.Series(0).Points.Last.Label = "60-75"
+        Chart3.Series(0).Points.Add(Label11.Text.ToString)
+        Chart3.Series(0).Points.Last.Label = "<60"
+        Button1.Enabled = False
     End Sub
 
 
-    Private Sub CheckBox4_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox4.CheckedChanged
-        If CheckBox4.Checked = False And CheckBox1.Checked = True And CheckBox2.Checked = True And CheckBox3.Checked = True Then
-            totall = count1 + count2 + count3
-            count1percent = 100 * (count1 / totall)
-            count2percent = 100 * (count2 / totall)
-            count3percent = 100 * (count3 / totall)
-            Dim percents() As Integer = {count1percent.ToString, count2percent.ToString, count3percent.ToString}
-            Dim colors() As Color = {Color.Blue, Color.Green, Color.Red}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        ElseIf CheckBox4.Checked = False And CheckBox1.Checked = False And CheckBox2.Checked = True And CheckBox3.Checked = True Then
-            totall = count2 + count3
-            count2percent = 100 * (count2 / totall)
-            count3percent = 100 * (count3 / totall)
-            Dim percents() As Integer = {count2percent.ToString, count3percent.ToString}
-            Dim colors() As Color = {Color.Green, Color.Red}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        ElseIf CheckBox4.Checked = False And CheckBox1.Checked = True And CheckBox2.Checked = False And CheckBox3.Checked = True Then
-            totall = count1 + count3
-            count1percent = 100 * (count1 / totall)
-            count3percent = 100 * (count3 / totall)
-            Dim percents() As Integer = {count1percent.ToString, count3percent.ToString}
-            Dim colors() As Color = {Color.Blue, Color.Red}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        ElseIf CheckBox4.Checked = False And CheckBox1.Checked = True And CheckBox2.Checked = True And CheckBox3.Checked = False Then
-            totall = count1 + count2
-            count1percent = 100 * (count1 / totall)
-            count2percent = 100 * (count2 / totall)
-            Dim percents() As Integer = {count1percent.ToString, count2percent.ToString}
-            Dim colors() As Color = {Color.Blue, Color.Green}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        ElseIf CheckBox4.Checked = False And CheckBox1.Checked = False And CheckBox2.Checked = False And CheckBox3.Checked = True Then
-            totall = count3
-            count3percent = 100 * (count3 / totall)
-            Dim percents() As Integer = {count3percent.ToString}
-            Dim colors() As Color = {Color.Red}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        ElseIf CheckBox4.Checked = False And CheckBox1.Checked = False And CheckBox2.Checked = True And CheckBox3.Checked = False Then
-            totall = count2
-            count2percent = 100 * (count2 / totall)
-            Dim percents() As Integer = {count2percent.ToString}
-            Dim colors() As Color = {Color.Green}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        ElseIf CheckBox4.Checked = False And CheckBox1.Checked = True And CheckBox2.Checked = False And CheckBox3.Checked = False Then
-            totall = count1
-            count1percent = 100 * (count1 / totall)
-            Dim percents() As Integer = {count1percent.ToString}
-            Dim colors() As Color = {Color.Blue}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        ElseIf CheckBox4.Checked = True And CheckBox1.Checked = False And CheckBox2.Checked = True And CheckBox3.Checked = True Then
-            totall = count2 + count3 + count4
-            count2percent = 100 * (count2 / totall)
-            count3percent = 100 * (count3 / totall)
-            count4percent = 100 * (count4 / totall)
-            Dim percents() As Integer = {count2percent.ToString, count3percent.ToString, count4percent.ToString}
-            Dim colors() As Color = {Color.Green, Color.Red, Color.Yellow}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        ElseIf CheckBox4.Checked = True And CheckBox1.Checked = True And CheckBox2.Checked = False And CheckBox3.Checked = True Then
-            totall = count1 + count3 + count4
-            count1percent = 100 * (count1 / totall)
-            count3percent = 100 * (count3 / totall)
-            count4percent = 100 * (count4 / totall)
-            Dim percents() As Integer = {count1percent.ToString, count3percent.ToString, count4percent.ToString}
-            Dim colors() As Color = {Color.Blue, Color.Red, Color.Yellow}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        ElseIf CheckBox4.Checked = True And CheckBox1.Checked = True And CheckBox2.Checked = True And CheckBox3.Checked = False Then
-            totall = count1 + count2
-            count1percent = 100 * (count1 / totall)
-            count2percent = 100 * (count2 / totall)
-            count4percent = 100 * (count4 / totall)
-            Dim percents() As Integer = {count1percent.ToString, count2percent.ToString, count4percent.ToString}
-            Dim colors() As Color = {Color.Blue, Color.Green, Color.Yellow}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        ElseIf CheckBox4.Checked = True And CheckBox1.Checked = False And CheckBox2.Checked = False And CheckBox3.Checked = True Then
-            totall = count3 + count4
-            count3percent = 100 * (count3 / totall)
-            count4percent = 100 * (count4 / totall)
-            Dim percents() As Integer = {count3percent.ToString, count4percent.ToString}
-            Dim colors() As Color = {Color.Red, Color.Yellow}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        ElseIf CheckBox4.Checked = True And CheckBox1.Checked = False And CheckBox2.Checked = True And CheckBox3.Checked = False Then
-            totall = count2 + count4
-            count2percent = 100 * (count2 / totall)
-            count4percent = 100 * (count4 / totall)
-            Dim percents() As Integer = {count2percent.ToString, count4percent.ToString}
-            Dim colors() As Color = {Color.Green, Color.Yellow}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        ElseIf CheckBox4.Checked = True And CheckBox1.Checked = True And CheckBox2.Checked = False And CheckBox3.Checked = False Then
-            totall = count1 + count4
-            count1percent = 100 * (count1 / totall)
-            count4percent = 100 * (count4 / totall)
-            Dim percents() As Integer = {count1percent.ToString, count4percent.ToString}
-            Dim colors() As Color = {Color.Blue, Color.Yellow}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-    End Sub
 
-    Private Sub CheckBox3_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox3.CheckedChanged
-        If CheckBox3.Checked = False And CheckBox1.Checked = True And CheckBox2.Checked = True And CheckBox4.Checked = True Then
-            totall = count1 + count2 + count4
-            count1percent = 100 * (count1 / totall)
-            count2percent = 100 * (count2 / totall)
-            count4percent = 100 * (count4 / totall)
-            Dim percents() As Integer = {count1percent.ToString, count2percent.ToString, count4percent.ToString}
-            Dim colors() As Color = {Color.Blue, Color.Green, Color.Yellow}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox3.Checked = False And CheckBox1.Checked = False And CheckBox2.Checked = True And CheckBox4.Checked = True Then
-            totall = count2 + count4
-            count2percent = 100 * (count2 / totall)
-            count4percent = 100 * (count4 / totall)
-            Dim percents() As Integer = {count2percent.ToString, count4percent.ToString}
-            Dim colors() As Color = {Color.Green, Color.Yellow}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox3.Checked = False And CheckBox1.Checked = True And CheckBox2.Checked = False And CheckBox4.Checked = True Then
-            totall = count1 + count4
-            count1percent = 100 * (count1 / totall)
-            count4percent = 100 * (count4 / totall)
-            Dim percents() As Integer = {count1percent.ToString, count4percent.ToString}
-            Dim colors() As Color = {Color.Blue, Color.Yellow}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox3.Checked = False And CheckBox1.Checked = True And CheckBox2.Checked = True And CheckBox4.Checked = False Then
-            totall = count1 + count2
-            count1percent = 100 * (count1 / totall)
-            count2percent = 100 * (count2 / totall)
-            Dim percents() As Integer = {count1percent.ToString, count2percent.ToString}
-            Dim colors() As Color = {Color.Blue, Color.Green}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox3.Checked = False And CheckBox1.Checked = False And CheckBox2.Checked = False And CheckBox4.Checked = True Then
-            totall = count4
-            count4percent = 100 * (count4 / totall)
-            Dim percents() As Integer = {count4percent.ToString}
-            Dim colors() As Color = {Color.Yellow}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox3.Checked = False And CheckBox1.Checked = False And CheckBox2.Checked = True And CheckBox4.Checked = False Then
-            totall = count2
-            count2percent = 100 * (count2 / totall)
-            Dim percents() As Integer = {count2percent.ToString}
-            Dim colors() As Color = {Color.Green}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox3.Checked = False And CheckBox1.Checked = True And CheckBox2.Checked = False And CheckBox4.Checked = False Then
-            totall = count1
-            count1percent = 100 * (count1 / totall)
-            Dim percents() As Integer = {count1percent.ToString}
-            Dim colors() As Color = {Color.Blue}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-    End Sub
 
-    Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
-        If CheckBox2.Checked = False And CheckBox1.Checked = True And CheckBox4.Checked = True And CheckBox3.Checked = True Then
-            totall = count1 + count4 + count3
-            count1percent = 100 * (count1 / totall)
-            count4percent = 100 * (count4 / totall)
-            count3percent = 100 * (count3 / totall)
-            Dim percents() As Integer = {count1percent.ToString, count4percent.ToString, count3percent.ToString}
-            Dim colors() As Color = {Color.Blue, Color.Yellow, Color.Red}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox2.Checked = False And CheckBox1.Checked = False And CheckBox4.Checked = True And CheckBox3.Checked = True Then
-            totall = count4 + count3
-            count4percent = 100 * (count4 / totall)
-            count3percent = 100 * (count3 / totall)
-            Dim percents() As Integer = {count4percent.ToString, count3percent.ToString}
-            Dim colors() As Color = {Color.Yellow, Color.Red}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox2.Checked = False And CheckBox1.Checked = True And CheckBox4.Checked = False And CheckBox3.Checked = True Then
-            totall = count1 + count3
-            count1percent = 100 * (count1 / totall)
-            count3percent = 100 * (count3 / totall)
-            Dim percents() As Integer = {count1percent.ToString, count3percent.ToString}
-            Dim colors() As Color = {Color.Blue, Color.Red}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox2.Checked = False And CheckBox1.Checked = True And CheckBox4.Checked = True And CheckBox3.Checked = False Then
-            totall = count1 + count4
-            count1percent = 100 * (count1 / totall)
-            count4percent = 100 * (count4 / totall)
-            Dim percents() As Integer = {count1percent.ToString, count4percent.ToString}
-            Dim colors() As Color = {Color.Blue, Color.Yellow}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox4.Checked = False And CheckBox1.Checked = False And CheckBox2.Checked = False And CheckBox3.Checked = True Then
-            totall = count3
-            count3percent = 100 * (count3 / totall)
-            Dim percents() As Integer = {count3percent.ToString}
-            Dim colors() As Color = {Color.Red}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox4.Checked = False And CheckBox1.Checked = False And CheckBox2.Checked = True And CheckBox3.Checked = False Then
-            totall = count2
-            count2percent = 100 * (count2 / totall)
-            Dim percents() As Integer = {count2percent.ToString}
-            Dim colors() As Color = {Color.Green}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox4.Checked = False And CheckBox1.Checked = True And CheckBox2.Checked = False And CheckBox3.Checked = False Then
-            totall = count1
-            count1percent = 100 * (count1 / totall)
-            Dim percents() As Integer = {count1percent.ToString}
-            Dim colors() As Color = {Color.Blue}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-    End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.Checked = False And CheckBox2.Checked = True And CheckBox4.Checked = True And CheckBox3.Checked = True Then
-            totall = count2 + count4 + count3
-            count2percent = 100 * (count2 / totall)
-            count4percent = 100 * (count4 / totall)
-            count3percent = 100 * (count3 / totall)
-            Dim percents() As Integer = {count1percent.ToString, count4percent.ToString, count3percent.ToString}
-            Dim colors() As Color = {Color.Blue, Color.Yellow, Color.Red}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox1.Checked = False And CheckBox2.Checked = False And CheckBox4.Checked = True And CheckBox3.Checked = True Then
-            totall = count4 + count3
-            count4percent = 100 * (count4 / totall)
-            count3percent = 100 * (count3 / totall)
-            Dim percents() As Integer = {count4percent.ToString, count3percent.ToString}
-            Dim colors() As Color = {Color.Yellow, Color.Red}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox1.Checked = False And CheckBox1.Checked = True And CheckBox4.Checked = False And CheckBox3.Checked = True Then
-            totall = count1 + count3
-            count1percent = 100 * (count1 / totall)
-            count3percent = 100 * (count3 / totall)
-            Dim percents() As Integer = {count1percent.ToString, count3percent.ToString}
-            Dim colors() As Color = {Color.Blue, Color.Red}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox1.Checked = False And CheckBox1.Checked = True And CheckBox4.Checked = True And CheckBox3.Checked = False Then
-            totall = count1 + count4
-            count1percent = 100 * (count1 / totall)
-            count4percent = 100 * (count4 / totall)
-            Dim percents() As Integer = {count1percent.ToString, count4percent.ToString}
-            Dim colors() As Color = {Color.Blue, Color.Yellow}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox4.Checked = False And CheckBox1.Checked = False And CheckBox2.Checked = False And CheckBox3.Checked = True Then
-            totall = count3
-            count3percent = 100 * (count3 / totall)
-            Dim percents() As Integer = {count3percent.ToString}
-            Dim colors() As Color = {Color.Red}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox1.Checked = False And CheckBox1.Checked = False And CheckBox2.Checked = True And CheckBox3.Checked = False Then
-            totall = count2
-            count2percent = 100 * (count2 / totall)
-            Dim percents() As Integer = {count2percent.ToString}
-            Dim colors() As Color = {Color.Green}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-        If CheckBox1.Checked = False And CheckBox1.Checked = True And CheckBox2.Checked = False And CheckBox3.Checked = False Then
-            totall = count1
-            count1percent = 100 * (count1 / totall)
-            Dim percents() As Integer = {count1percent.ToString}
-            Dim colors() As Color = {Color.Blue}
-            Dim graphics As Graphics = Me.CreateGraphics
-            Dim location As Point = New Point(350, 50)
-            Dim size As Size = New Size(200, 200)
-            DrawPieChart(percents, colors, graphics, location, size)
-            Label1.Text = "Pie Chart"
-        End If
-    End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Passlocal = Form2.Pass
@@ -524,12 +147,24 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
         totall = Passlocal + Faillocal
         passpercent = 100 * (Passlocal / totall)
         failpercent = 100 * (Faillocal / totall)
-        Dim percents() As Integer = {passpercent.ToString, failpercent.ToString}
-        Dim colors() As Color = {Color.Purple, Color.Orchid}
-        Dim graphics As Graphics = Me.CreateGraphics
-        Dim location As Point = New Point(350, 248)
-        Dim size As Size = New Size(200, 200)
-        DrawPieChart(percents, colors, graphics, location, size)
+        ' Dim percents() As Integer = {passpercent.ToString, failpercent.ToString}
+        'Dim colors() As Color = {Color.Green, Color.Red}
+        'Dim graphics As Graphics = Me.CreateGraphics
+        'Dim location As Point = New Point(350, 248)
+        'Dim size As Size = New Size(200, 200)
+        'DrawPieChart(percents, colors, graphics, location, size)
         'Label1.Text = "Pie Chart"
+        Label28.Text = Label14.Text
+        Label27.Text = Label15.Text
+        Chart2.Series(0).Points.Add(Label14.Text.ToString)
+        Chart2.Series(0).Label = "PASSED"
+        Chart2.Series(1).Points.Add(Label15.Text.ToString)
+        Chart2.Series(1).Label = "FAILED"
+        Button2.Enabled = False
+
+        Chart4.Series(0).Points.Add(Label14.Text.ToString)
+        Chart4.Series(0).Points.Last.Label = "PASSED"
+        Chart4.Series(0).Points.Add(Label15.Text.ToString)
+        Chart4.Series(0).Points.Last.Label = "FAILED"
     End Sub
 End Class
