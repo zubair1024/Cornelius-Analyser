@@ -50,7 +50,8 @@ Public Class Form2
 
     End Structure
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Button2.Enabled = False
+        Button1.Enabled = False
     End Sub
     Public Function countsubjects(ByVal rawdata As String)
         Dim subcount As Integer = 0
@@ -367,7 +368,9 @@ step1:      Dim j As Integer = Studobjects(i).temp.IndexOf(dept)
         Label58.Text = avgsub(6)
         Label57.Text = avgsub(7)
 
-
+        Browsebtn.Enabled = False
+        Button2.Enabled = True
+        Button1.Enabled = True
     End Sub
     Public Function ReadPdfFile(ByVal fileName As String)
 
@@ -547,7 +550,7 @@ step1:      Dim j As Integer = Studobjects(i).temp.IndexOf(dept)
 
         ListBox1.Items.Clear()
 
-
+        Browsebtn.Enabled = Enabled
 
 
     End Sub

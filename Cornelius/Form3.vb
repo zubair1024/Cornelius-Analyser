@@ -127,12 +127,16 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
 
         Chart3.Series(0).Points.Add(Label8.Text.ToString)
         Chart3.Series(0).Points.Last.Label = ">80"
+        Chart3.Series(0).Points.Last.Color = Color.Blue
         Chart3.Series(0).Points.Add(Label9.Text.ToString)
         Chart3.Series(0).Points.Last.Label = "75-80"
+        Chart3.Series(0).Points.Last.Color = Color.Green
         Chart3.Series(0).Points.Add(Label10.Text.ToString)
         Chart3.Series(0).Points.Last.Label = "60-75"
+        Chart3.Series(0).Points.Last.Color = Color.Red
         Chart3.Series(0).Points.Add(Label11.Text.ToString)
         Chart3.Series(0).Points.Last.Label = "<60"
+        Chart3.Series(0).Points.Last.Color = Color.Yellow
         Button1.Enabled = False
     End Sub
 
@@ -163,8 +167,10 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
         Button2.Enabled = False
 
         Chart4.Series(0).Points.Add(Label14.Text.ToString)
+        Chart4.Series(0).Points.Last.Color = Color.Green
         Chart4.Series(0).Points.Last.Label = "PASSED"
         Chart4.Series(0).Points.Add(Label15.Text.ToString)
         Chart4.Series(0).Points.Last.Label = "FAILED"
+        Chart4.Series(0).Points.Last.Color = Color.Red
     End Sub
 End Class

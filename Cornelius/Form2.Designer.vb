@@ -102,7 +102,7 @@ Partial Class Form2
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 297)
+        Me.TextBox1.Location = New System.Drawing.Point(12, 208)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(684, 26)
@@ -110,7 +110,7 @@ Partial Class Form2
         '
         'Browsebtn
         '
-        Me.Browsebtn.Location = New System.Drawing.Point(714, 294)
+        Me.Browsebtn.Location = New System.Drawing.Point(714, 205)
         Me.Browsebtn.Name = "Browsebtn"
         Me.Browsebtn.Size = New System.Drawing.Size(141, 32)
         Me.Browsebtn.TabIndex = 1
@@ -131,7 +131,7 @@ Partial Class Form2
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 274)
+        Me.Label1.Location = New System.Drawing.Point(12, 185)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(220, 20)
         Me.Label1.TabIndex = 4
@@ -140,7 +140,7 @@ Partial Class Form2
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(64, 357)
+        Me.Label2.Location = New System.Drawing.Point(64, 268)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(157, 20)
         Me.Label2.TabIndex = 5
@@ -149,7 +149,7 @@ Partial Class Form2
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(8, 386)
+        Me.Label3.Location = New System.Drawing.Point(8, 297)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(213, 20)
         Me.Label3.TabIndex = 6
@@ -158,7 +158,7 @@ Partial Class Form2
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(82, 449)
+        Me.Label4.Location = New System.Drawing.Point(82, 360)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(138, 20)
         Me.Label4.TabIndex = 7
@@ -167,7 +167,7 @@ Partial Class Form2
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(22, 420)
+        Me.Label5.Location = New System.Drawing.Point(22, 331)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(199, 20)
         Me.Label5.TabIndex = 8
@@ -176,7 +176,7 @@ Partial Class Form2
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(75, 483)
+        Me.Label6.Location = New System.Drawing.Point(75, 394)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(146, 20)
         Me.Label6.TabIndex = 9
@@ -185,7 +185,7 @@ Partial Class Form2
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(55, 549)
+        Me.Label7.Location = New System.Drawing.Point(55, 460)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(170, 20)
         Me.Label7.TabIndex = 10
@@ -194,7 +194,7 @@ Partial Class Form2
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(51, 624)
+        Me.Label8.Location = New System.Drawing.Point(51, 535)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(174, 20)
         Me.Label8.TabIndex = 11
@@ -204,7 +204,7 @@ Partial Class Form2
         '
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 20
-        Me.ListBox1.Location = New System.Drawing.Point(26, 670)
+        Me.ListBox1.Location = New System.Drawing.Point(26, 601)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.ScrollAlwaysVisible = True
         Me.ListBox1.Size = New System.Drawing.Size(241, 324)
@@ -213,7 +213,7 @@ Partial Class Form2
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(22, 646)
+        Me.Label9.Location = New System.Drawing.Point(22, 577)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(88, 20)
         Me.Label9.TabIndex = 13
@@ -222,7 +222,7 @@ Partial Class Form2
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(226, 357)
+        Me.Label10.Location = New System.Drawing.Point(226, 268)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(14, 20)
         Me.Label10.TabIndex = 15
@@ -231,7 +231,7 @@ Partial Class Form2
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(226, 386)
+        Me.Label11.Location = New System.Drawing.Point(226, 297)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(14, 20)
         Me.Label11.TabIndex = 16
@@ -240,7 +240,7 @@ Partial Class Form2
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(226, 420)
+        Me.Label12.Location = New System.Drawing.Point(226, 331)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(14, 20)
         Me.Label12.TabIndex = 17
@@ -249,7 +249,7 @@ Partial Class Form2
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(226, 449)
+        Me.Label13.Location = New System.Drawing.Point(226, 360)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(14, 20)
         Me.Label13.TabIndex = 18
@@ -258,7 +258,7 @@ Partial Class Form2
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(226, 483)
+        Me.Label14.Location = New System.Drawing.Point(226, 394)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(14, 20)
         Me.Label14.TabIndex = 19
@@ -267,7 +267,7 @@ Partial Class Form2
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(242, 549)
+        Me.Label15.Location = New System.Drawing.Point(242, 460)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(14, 20)
         Me.Label15.TabIndex = 20
@@ -276,7 +276,7 @@ Partial Class Form2
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(331, 549)
+        Me.Label16.Location = New System.Drawing.Point(331, 460)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(14, 20)
         Me.Label16.TabIndex = 21
@@ -285,7 +285,7 @@ Partial Class Form2
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(417, 549)
+        Me.Label17.Location = New System.Drawing.Point(417, 460)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(14, 20)
         Me.Label17.TabIndex = 22
@@ -294,7 +294,7 @@ Partial Class Form2
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(505, 549)
+        Me.Label18.Location = New System.Drawing.Point(505, 460)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(14, 20)
         Me.Label18.TabIndex = 23
@@ -303,7 +303,7 @@ Partial Class Form2
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(608, 549)
+        Me.Label19.Location = New System.Drawing.Point(608, 460)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(14, 20)
         Me.Label19.TabIndex = 24
@@ -312,7 +312,7 @@ Partial Class Form2
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(710, 549)
+        Me.Label20.Location = New System.Drawing.Point(710, 460)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(14, 20)
         Me.Label20.TabIndex = 25
@@ -321,7 +321,7 @@ Partial Class Form2
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(814, 549)
+        Me.Label21.Location = New System.Drawing.Point(814, 460)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(14, 20)
         Me.Label21.TabIndex = 26
@@ -331,7 +331,7 @@ Partial Class Form2
         '
         Me.Label22.AutoEllipsis = True
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(927, 549)
+        Me.Label22.Location = New System.Drawing.Point(927, 460)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(14, 20)
         Me.Label22.TabIndex = 27
@@ -340,7 +340,7 @@ Partial Class Form2
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(242, 624)
+        Me.Label23.Location = New System.Drawing.Point(242, 535)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(14, 20)
         Me.Label23.TabIndex = 28
@@ -349,7 +349,7 @@ Partial Class Form2
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(331, 624)
+        Me.Label24.Location = New System.Drawing.Point(331, 535)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(14, 20)
         Me.Label24.TabIndex = 29
@@ -358,7 +358,7 @@ Partial Class Form2
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(417, 624)
+        Me.Label25.Location = New System.Drawing.Point(417, 535)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(14, 20)
         Me.Label25.TabIndex = 30
@@ -367,7 +367,7 @@ Partial Class Form2
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(505, 624)
+        Me.Label26.Location = New System.Drawing.Point(505, 535)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(14, 20)
         Me.Label26.TabIndex = 31
@@ -376,7 +376,7 @@ Partial Class Form2
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(608, 624)
+        Me.Label27.Location = New System.Drawing.Point(608, 535)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(14, 20)
         Me.Label27.TabIndex = 32
@@ -385,7 +385,7 @@ Partial Class Form2
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(710, 624)
+        Me.Label28.Location = New System.Drawing.Point(710, 535)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(14, 20)
         Me.Label28.TabIndex = 33
@@ -394,7 +394,7 @@ Partial Class Form2
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(814, 624)
+        Me.Label29.Location = New System.Drawing.Point(814, 535)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(14, 20)
         Me.Label29.TabIndex = 34
@@ -403,7 +403,7 @@ Partial Class Form2
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(927, 624)
+        Me.Label30.Location = New System.Drawing.Point(927, 535)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(14, 20)
         Me.Label30.TabIndex = 35
@@ -412,7 +412,7 @@ Partial Class Form2
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(296, 788)
+        Me.Label31.Location = New System.Drawing.Point(296, 719)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(14, 20)
         Me.Label31.TabIndex = 36
@@ -421,7 +421,7 @@ Partial Class Form2
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(385, 788)
+        Me.Label32.Location = New System.Drawing.Point(385, 719)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(14, 20)
         Me.Label32.TabIndex = 37
@@ -430,7 +430,7 @@ Partial Class Form2
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(474, 788)
+        Me.Label33.Location = New System.Drawing.Point(474, 719)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(14, 20)
         Me.Label33.TabIndex = 38
@@ -439,7 +439,7 @@ Partial Class Form2
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(556, 788)
+        Me.Label34.Location = New System.Drawing.Point(556, 719)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(14, 20)
         Me.Label34.TabIndex = 39
@@ -448,7 +448,7 @@ Partial Class Form2
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(642, 788)
+        Me.Label35.Location = New System.Drawing.Point(642, 719)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(14, 20)
         Me.Label35.TabIndex = 40
@@ -457,7 +457,7 @@ Partial Class Form2
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(734, 788)
+        Me.Label36.Location = New System.Drawing.Point(734, 719)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(14, 20)
         Me.Label36.TabIndex = 41
@@ -466,7 +466,7 @@ Partial Class Form2
         'Label37
         '
         Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(296, 871)
+        Me.Label37.Location = New System.Drawing.Point(296, 802)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(14, 20)
         Me.Label37.TabIndex = 42
@@ -475,7 +475,7 @@ Partial Class Form2
         'Label38
         '
         Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(385, 871)
+        Me.Label38.Location = New System.Drawing.Point(385, 802)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(14, 20)
         Me.Label38.TabIndex = 43
@@ -484,7 +484,7 @@ Partial Class Form2
         'Label39
         '
         Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(474, 871)
+        Me.Label39.Location = New System.Drawing.Point(474, 802)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(14, 20)
         Me.Label39.TabIndex = 44
@@ -492,7 +492,7 @@ Partial Class Form2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(836, 871)
+        Me.Button1.Location = New System.Drawing.Point(836, 802)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(196, 38)
         Me.Button1.TabIndex = 46
@@ -501,9 +501,9 @@ Partial Class Form2
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(836, 902)
+        Me.Button2.Location = New System.Drawing.Point(861, 205)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(196, 38)
+        Me.Button2.Size = New System.Drawing.Size(196, 32)
         Me.Button2.TabIndex = 47
         Me.Button2.Text = "Clear All"
         Me.Button2.UseVisualStyleBackColor = True
@@ -511,7 +511,7 @@ Partial Class Form2
         'Label40
         '
         Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(242, 520)
+        Me.Label40.Location = New System.Drawing.Point(242, 431)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(14, 20)
         Me.Label40.TabIndex = 48
@@ -520,7 +520,7 @@ Partial Class Form2
         'Label41
         '
         Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(331, 520)
+        Me.Label41.Location = New System.Drawing.Point(331, 431)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(14, 20)
         Me.Label41.TabIndex = 49
@@ -529,7 +529,7 @@ Partial Class Form2
         'Label42
         '
         Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(417, 520)
+        Me.Label42.Location = New System.Drawing.Point(417, 431)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(14, 20)
         Me.Label42.TabIndex = 50
@@ -538,7 +538,7 @@ Partial Class Form2
         'Label43
         '
         Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(505, 520)
+        Me.Label43.Location = New System.Drawing.Point(505, 431)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(14, 20)
         Me.Label43.TabIndex = 51
@@ -547,7 +547,7 @@ Partial Class Form2
         'Label44
         '
         Me.Label44.AutoSize = True
-        Me.Label44.Location = New System.Drawing.Point(608, 520)
+        Me.Label44.Location = New System.Drawing.Point(608, 431)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(14, 20)
         Me.Label44.TabIndex = 52
@@ -556,7 +556,7 @@ Partial Class Form2
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(710, 520)
+        Me.Label45.Location = New System.Drawing.Point(710, 431)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(14, 20)
         Me.Label45.TabIndex = 53
@@ -565,7 +565,7 @@ Partial Class Form2
         'Label46
         '
         Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(814, 520)
+        Me.Label46.Location = New System.Drawing.Point(814, 431)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(14, 20)
         Me.Label46.TabIndex = 54
@@ -574,7 +574,7 @@ Partial Class Form2
         'Label47
         '
         Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(927, 520)
+        Me.Label47.Location = New System.Drawing.Point(927, 431)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(14, 20)
         Me.Label47.TabIndex = 55
@@ -587,7 +587,7 @@ Partial Class Form2
         'Label48
         '
         Me.Label48.AutoSize = True
-        Me.Label48.Location = New System.Drawing.Point(734, 823)
+        Me.Label48.Location = New System.Drawing.Point(734, 754)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(14, 20)
         Me.Label48.TabIndex = 61
@@ -596,7 +596,7 @@ Partial Class Form2
         'Label49
         '
         Me.Label49.AutoSize = True
-        Me.Label49.Location = New System.Drawing.Point(642, 823)
+        Me.Label49.Location = New System.Drawing.Point(642, 754)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(14, 20)
         Me.Label49.TabIndex = 60
@@ -605,7 +605,7 @@ Partial Class Form2
         'Label50
         '
         Me.Label50.AutoSize = True
-        Me.Label50.Location = New System.Drawing.Point(556, 823)
+        Me.Label50.Location = New System.Drawing.Point(556, 754)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(14, 20)
         Me.Label50.TabIndex = 59
@@ -614,7 +614,7 @@ Partial Class Form2
         'Label51
         '
         Me.Label51.AutoSize = True
-        Me.Label51.Location = New System.Drawing.Point(474, 823)
+        Me.Label51.Location = New System.Drawing.Point(474, 754)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(14, 20)
         Me.Label51.TabIndex = 58
@@ -623,7 +623,7 @@ Partial Class Form2
         'Label52
         '
         Me.Label52.AutoSize = True
-        Me.Label52.Location = New System.Drawing.Point(385, 823)
+        Me.Label52.Location = New System.Drawing.Point(385, 754)
         Me.Label52.Name = "Label52"
         Me.Label52.Size = New System.Drawing.Size(14, 20)
         Me.Label52.TabIndex = 57
@@ -632,7 +632,7 @@ Partial Class Form2
         'Label53
         '
         Me.Label53.AutoSize = True
-        Me.Label53.Location = New System.Drawing.Point(296, 823)
+        Me.Label53.Location = New System.Drawing.Point(296, 754)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(14, 20)
         Me.Label53.TabIndex = 56
@@ -641,7 +641,7 @@ Partial Class Form2
         'Label54
         '
         Me.Label54.AutoSize = True
-        Me.Label54.Location = New System.Drawing.Point(474, 904)
+        Me.Label54.Location = New System.Drawing.Point(474, 835)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(14, 20)
         Me.Label54.TabIndex = 64
@@ -650,7 +650,7 @@ Partial Class Form2
         'Label55
         '
         Me.Label55.AutoSize = True
-        Me.Label55.Location = New System.Drawing.Point(385, 904)
+        Me.Label55.Location = New System.Drawing.Point(385, 835)
         Me.Label55.Name = "Label55"
         Me.Label55.Size = New System.Drawing.Size(14, 20)
         Me.Label55.TabIndex = 63
@@ -659,7 +659,7 @@ Partial Class Form2
         'Label56
         '
         Me.Label56.AutoSize = True
-        Me.Label56.Location = New System.Drawing.Point(296, 904)
+        Me.Label56.Location = New System.Drawing.Point(296, 835)
         Me.Label56.Name = "Label56"
         Me.Label56.Size = New System.Drawing.Size(14, 20)
         Me.Label56.TabIndex = 62
@@ -668,7 +668,7 @@ Partial Class Form2
         'Label57
         '
         Me.Label57.AutoSize = True
-        Me.Label57.Location = New System.Drawing.Point(927, 585)
+        Me.Label57.Location = New System.Drawing.Point(927, 496)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(14, 20)
         Me.Label57.TabIndex = 73
@@ -677,7 +677,7 @@ Partial Class Form2
         'Label58
         '
         Me.Label58.AutoSize = True
-        Me.Label58.Location = New System.Drawing.Point(814, 585)
+        Me.Label58.Location = New System.Drawing.Point(814, 496)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(14, 20)
         Me.Label58.TabIndex = 72
@@ -686,7 +686,7 @@ Partial Class Form2
         'Label59
         '
         Me.Label59.AutoSize = True
-        Me.Label59.Location = New System.Drawing.Point(710, 585)
+        Me.Label59.Location = New System.Drawing.Point(710, 496)
         Me.Label59.Name = "Label59"
         Me.Label59.Size = New System.Drawing.Size(14, 20)
         Me.Label59.TabIndex = 71
@@ -695,7 +695,7 @@ Partial Class Form2
         'Label60
         '
         Me.Label60.AutoSize = True
-        Me.Label60.Location = New System.Drawing.Point(608, 585)
+        Me.Label60.Location = New System.Drawing.Point(608, 496)
         Me.Label60.Name = "Label60"
         Me.Label60.Size = New System.Drawing.Size(14, 20)
         Me.Label60.TabIndex = 70
@@ -704,7 +704,7 @@ Partial Class Form2
         'Label61
         '
         Me.Label61.AutoSize = True
-        Me.Label61.Location = New System.Drawing.Point(505, 585)
+        Me.Label61.Location = New System.Drawing.Point(505, 496)
         Me.Label61.Name = "Label61"
         Me.Label61.Size = New System.Drawing.Size(14, 20)
         Me.Label61.TabIndex = 69
@@ -713,7 +713,7 @@ Partial Class Form2
         'Label62
         '
         Me.Label62.AutoSize = True
-        Me.Label62.Location = New System.Drawing.Point(417, 585)
+        Me.Label62.Location = New System.Drawing.Point(417, 496)
         Me.Label62.Name = "Label62"
         Me.Label62.Size = New System.Drawing.Size(14, 20)
         Me.Label62.TabIndex = 68
@@ -722,7 +722,7 @@ Partial Class Form2
         'Label63
         '
         Me.Label63.AutoSize = True
-        Me.Label63.Location = New System.Drawing.Point(331, 585)
+        Me.Label63.Location = New System.Drawing.Point(331, 496)
         Me.Label63.Name = "Label63"
         Me.Label63.Size = New System.Drawing.Size(14, 20)
         Me.Label63.TabIndex = 67
@@ -731,7 +731,7 @@ Partial Class Form2
         'Label64
         '
         Me.Label64.AutoSize = True
-        Me.Label64.Location = New System.Drawing.Point(242, 585)
+        Me.Label64.Location = New System.Drawing.Point(242, 496)
         Me.Label64.Name = "Label64"
         Me.Label64.Size = New System.Drawing.Size(14, 20)
         Me.Label64.TabIndex = 66
@@ -740,7 +740,7 @@ Partial Class Form2
         'Label65
         '
         Me.Label65.AutoSize = True
-        Me.Label65.Location = New System.Drawing.Point(45, 585)
+        Me.Label65.Location = New System.Drawing.Point(45, 496)
         Me.Label65.Name = "Label65"
         Me.Label65.Size = New System.Drawing.Size(178, 20)
         Me.Label65.TabIndex = 65
@@ -749,7 +749,7 @@ Partial Class Form2
         'Label66
         '
         Me.Label66.AutoSize = True
-        Me.Label66.Location = New System.Drawing.Point(643, 904)
+        Me.Label66.Location = New System.Drawing.Point(643, 835)
         Me.Label66.Name = "Label66"
         Me.Label66.Size = New System.Drawing.Size(14, 20)
         Me.Label66.TabIndex = 75
@@ -758,7 +758,7 @@ Partial Class Form2
         'Label67
         '
         Me.Label67.AutoSize = True
-        Me.Label67.Location = New System.Drawing.Point(643, 871)
+        Me.Label67.Location = New System.Drawing.Point(643, 802)
         Me.Label67.Name = "Label67"
         Me.Label67.Size = New System.Drawing.Size(14, 20)
         Me.Label67.TabIndex = 74
