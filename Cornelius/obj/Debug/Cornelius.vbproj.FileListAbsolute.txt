@@ -59,3 +59,9 @@ C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\WindowsApp
 C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\WindowsApplication1.Resources.resources
 C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\WindowsApplication1.SplashScreen1.resources
 C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\Cornelius.vbproj.GenerateResource.Cache
+C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\bin\Debug\Cornelius.exe.manifest
+C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\bin\Debug\Cornelius.application
+C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\Cornelius.exe.manifest
+C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\Cornelius.application
+C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\WindowsApplication1.AboutBox1.resources
+C:\Users\abcd\Documents\GitHub\Cornelius-Analyser\Cornelius\obj\Debug\WindowsApplication1.AboutBox2.resources

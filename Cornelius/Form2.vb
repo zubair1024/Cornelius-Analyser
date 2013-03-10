@@ -1,4 +1,6 @@
-﻿Imports iTextSharp.text.pdf
+﻿'Imports Microsoft.Office.Interop.Excel
+
+Imports iTextSharp.text.pdf
 Imports System.IO
 
 Public Class Form2
@@ -15,6 +17,8 @@ Public Class Form2
     Dim indexx As Integer = -1
 
     Private Sub Browsebtn_Click(sender As Object, e As EventArgs) Handles Browsebtn.Click
+        Button3.Enabled = True
+
         If (OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK) Then
 
             Dim sourcePdf As String = OpenFileDialog1.FileName
@@ -26,9 +30,9 @@ Public Class Form2
             Dim tempdata As String
             tempdata = ReadPdfFile(OpenFileDialog1.FileName)
             'For debug only 
-            Dim fwrite As New StreamWriter("C:\Web\test.txt")
-            fwrite.Write(tempdata)
-            fwrite.Close()
+            '   Dim fwrite As New StreamWriter("C:\Web\test.txt")
+            '  fwrite.Write(tempdata)
+            ' fwrite.Close()
             ParseToObjects(tempdata)
             TextBox1.Text = sourcePdf.ToString
         End If
@@ -560,6 +564,220 @@ step1:      Dim j As Integer = Studobjects(i).temp.IndexOf(dept)
 
         frm.Show()
 
+
+    End Sub
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        export("Excel")
+    End Sub
+    Public Sub Export(ByVal format As String)
+
+        If SaveFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+
+            Dim ExApp As Microsoft.Office.Interop.Excel.Application
+
+            Dim ExWBook As Microsoft.Office.Interop.Excel.Workbook
+
+            Dim ExWSheet As Microsoft.Office.Interop.Excel.Worksheet
+
+            Dim ExRange As Microsoft.Office.Interop.Excel.Range
+
+            Try
+
+                ExApp = New Microsoft.Office.Interop.Excel.Application
+
+                ExWBook = ExApp.Workbooks.Add
+
+                ExWSheet = ExWBook.Sheets.Item(1)
+
+            Catch ex As Exception
+
+                MessageBox.Show("Failed to open Excel:" & ex.Message, "Export to Excel Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            End Try
+
+            ExApp.DisplayAlerts = False
+
+            ExApp.Visible = False
+
+            'ExRange = ExWSheet.Range("A1:A" + (studcount + 1).ToString)
+
+            ExRange = ExWSheet.Range("A1:K11")
+
+            Dim headarray(studcount + 1, 8 + (Studobjects(0).scount * 3)) As String
+
+            ExWSheet.Cells(1, 1) = "S.No."
+
+            For i As Integer = 2 To studcount + 1 Step 1
+
+                'headarray(i) = i.ToString
+
+                'ExWSheet.Cells(i, 1) = (i - 1).ToString
+
+            Next
+
+            ' MessageBox.Show("B2:" + Chr(70 + (Studobjects(0).scount * 3)) + (studcount + 1).ToString)
+
+            Dim tempval As Integer = 70 + (Studobjects(0).scount * 3)
+
+            Dim char1, char2 As Char
+
+            If tempval > 90 Then
+
+                char1 = "A"
+
+                char2 = Chr(tempval - 25)
+
+            Else
+
+                char1 = Chr(tempval)
+
+                char2 = ""
+
+            End If
+
+            ' ExRange = ExWSheet.Range("B2:" + char1 + char2 + (studcount + 1).ToString)
+
+            ' For i As Integer = 0 To studcount - 1 Step 1
+
+            'headarray(i, 0) = Studobjects(i).rollno
+
+            'headarray(i, 1) = Studobjects(i).sname
+
+            'Dim k As Integer = 2
+
+            'For j As Integer = 0 To Studobjects(0).scount - 1 Step 1
+
+            'headarray(i, k) = (Integer.Parse(Studobjects(i).SubjectC(j)) + Integer.Parse(Studobjects(i).SubjectA(j)))
+
+            'k = k + 1
+
+            'headarray(i, k) = Studobjects(i).SubjectE(j)
+
+            'k = k + 1
+
+            'headarray(i, k) = Studobjects(i).SubjectT(j)
+
+            'k = k + 1
+
+            'Next
+
+            'Next
+
+            Dim testarray(10, 10) As String
+
+            For i = 0 To 10 Step 1
+
+                For j = 0 To 10 Step 1
+
+                    testarray(i, j) = " "
+
+                Next
+
+            Next
+
+            testarray(1, 0) = "No. of students who appeared for the test"
+
+            testarray(1, 1) = Label10.Text.ToString
+
+            testarray(2, 0) = "No. of students who passed"
+
+            testarray(2, 1) = Label11.Text.ToString
+
+            testarray(3, 0) = "No. of students who failed"
+
+            testarray(3, 1) = Label12.Text.ToString
+
+            testarray(4, 0) = "Pass Percentage"
+
+            testarray(4, 1) = Label13.Text.ToString
+
+            testarray(5, 0) = "Fail Percentage"
+
+            testarray(5, 1) = Label14.Text.ToString
+
+            testarray(6, 0) = "Maximum Marks"
+
+            testarray(7, 0) = "Minimum Marks"
+
+            testarray(0, 3) = Label40.Text.ToString
+
+            testarray(0, 4) = Label41.Text.ToString
+
+            testarray(0, 5) = Label42.Text.ToString
+
+            testarray(0, 6) = Label43.Text.ToString
+
+            testarray(0, 7) = Label44.Text.ToString
+
+            testarray(0, 8) = Label45.Text.ToString
+
+            testarray(0, 9) = Label46.Text.ToString
+
+            testarray(0, 10) = Label47.Text.ToString
+
+            testarray(6, 3) = Label23.Text.ToString
+
+            testarray(6, 4) = Label24.Text.ToString
+
+            testarray(6, 5) = Label25.Text.ToString
+
+            testarray(6, 6) = Label26.Text.ToString
+
+            testarray(6, 7) = Label27.Text.ToString
+
+            testarray(6, 8) = Label28.Text.ToString
+
+            testarray(6, 9) = Label29.Text.ToString
+
+            testarray(6, 10) = Label30.Text.ToString
+
+            testarray(7, 3) = Label15.Text.ToString
+
+            testarray(7, 4) = Label16.Text.ToString
+
+            testarray(7, 5) = Label17.Text.ToString
+
+            testarray(7, 6) = Label18.Text.ToString
+
+            testarray(7, 7) = Label19.Text.ToString
+
+            testarray(7, 8) = Label20.Text.ToString
+
+            testarray(7, 9) = Label21.Text.ToString
+
+            testarray(7, 10) = Label22.Text.ToString
+
+            Dim piechart1 As Microsoft.Office.Interop.Excel.Chart
+
+            piechart1 = ExWBook.Charts.Add()
+
+            ExRange.Value = testarray
+
+            ExRange.Columns.AutoFit()
+            'ExWSheet.Range("B2:B6").
+            'ExWBook.ActiveChart.ChartType = Microsoft.Office.Interop.Excel.XlChartType.xlPie
+
+            'ExWBook.ActiveChart.SetSourceData(ExWSheet.Range("A3:B4"), Microsoft.Office.Interop.Excel.XlRowCol.xlColumns)
+
+            '            ExWBook.ActiveChart.Location(Microsoft.Office.Interop.Excel.XlChartLocation.xlLocationAsNewSheet, )
+
+            'ExRange.Value = headarray
+
+            ExWBook.SaveAs(SaveFileDialog1.FileName)
+
+            ExWBook.Close()
+
+            ExApp.Quit()
+
+
+
+        End If
+
+    End Sub
+
+  
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        AboutBox2.Show()
 
     End Sub
 End Class

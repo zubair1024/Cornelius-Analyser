@@ -1,4 +1,5 @@
-﻿Public Class Form3
+﻿
+Public Class Form3
     Dim count1 As Integer = 0
     Dim count2 As Integer = 0
     Dim count3 As Integer = 0
@@ -11,6 +12,9 @@
     Dim passpercent As Single = 0
     Dim failpercent As Single = 0
     Dim Passlocal, Faillocal As Integer
+    Dim Tper() As Integer
+    Dim cc As Integer
+
 
 
     Public Sub DrawPieChart(ByVal percents() As Integer, ByVal colors() As Color, _
@@ -42,7 +46,7 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
         Dim TPercent As String
         Dim Result As String
         Dim scount As Integer
- 
+
 
     End Structure
     Public Sub New()
@@ -70,6 +74,21 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
                 count4 = count4 + 1
             End If
         Next
+        ' For k = 0 To studcount - 1 Step 1
+        'ListBox1.Items.Add(Studobjects(k).sname)
+        'Next
+        ' For k = 0 To studcount - 1 Step 1
+        'Tper(k) = Studobjects(k).TPercent
+        'cc = k + 1
+        'Next
+
+        ' For k = 0 To studcount - 1 Step 1
+        ' If ListBox1.SelectedIndex = k Then
+        'Chart1.Series(1).Points.Add(Studobjects(k).TPercent)
+        ' Chart1.Series(1).Label = "Sem 5"
+        ' End If
+        ' Next
+
         'For loopy = 0 To studcount - 1 Step 1
         'If Studobjects(loopy).Result = "Failed" Then
         ' count1 = count1 + 1
@@ -116,6 +135,7 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
         'Label24.Text = Label9.Text
         'Label25.Text = Label10.Text
         'Label26.Text = Label11.Text
+
         Chart1.Series(0).Points.Add(Label8.Text.ToString)
         Chart1.Series(0).Label = ">80"
         Chart1.Series(1).Points.Add(Label9.Text.ToString)
@@ -125,18 +145,157 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
         Chart1.Series(3).Points.Add(Label11.Text.ToString)
         Chart1.Series(3).Label = "<60"
 
-        Chart3.Series(0).Points.Add(Label8.Text.ToString)
-        Chart3.Series(0).Points.Last.Label = ">80"
-        Chart3.Series(0).Points.Last.Color = Color.Blue
-        Chart3.Series(0).Points.Add(Label9.Text.ToString)
-        Chart3.Series(0).Points.Last.Label = "75-80"
-        Chart3.Series(0).Points.Last.Color = Color.Green
-        Chart3.Series(0).Points.Add(Label10.Text.ToString)
-        Chart3.Series(0).Points.Last.Label = "60-75"
-        Chart3.Series(0).Points.Last.Color = Color.Red
-        Chart3.Series(0).Points.Add(Label11.Text.ToString)
-        Chart3.Series(0).Points.Last.Label = "<60"
-        Chart3.Series(0).Points.Last.Color = Color.Yellow
+        'Chart3.Series(0).Points.Add(Label8.Text.ToString)
+        'Chart3.Series(0).Points.Last.Label = ">80"
+        'Chart3.Series(0).Points.Last.Color = Color.Blue
+        'Chart3.Series(0).Points.Add(Label9.Text.ToString)
+        'Chart3.Series(0).Points.Last.Label = "75-80"
+        'Chart3.Series(0).Points.Last.Color = Color.Green
+        'Chart3.Series(0).Points.Add(Label10.Text.ToString)
+        'Chart3.Series(0).Points.Last.Label = "60-75"
+        'Chart3.Series(0).Points.Last.Color = Color.Red
+        'Chart3.Series(0).Points.Add(Label11.Text.ToString)
+        'Chart3.Series(0).Points.Last.Label = "<60"
+        'Chart3.Series(0).Points.Last.Color = Color.Yellow
+        If Label8.Text.ToString = 0 And Label9.Text.ToString = 0 And Label10.Text.ToString = 0 And Label11.Text.ToString = 0 Then
+            Chart3.Series(0).Points.Add(Label8.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = ">80"
+            Chart3.Series(0).Points.Last.Color = Color.LightBlue
+            Chart3.Series(0).Points.Add(Label9.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "75-80"
+            Chart3.Series(0).Points.Last.Color = Color.Green
+            Chart3.Series(0).Points.Add(Label10.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "60-75"
+            Chart3.Series(0).Points.Last.Color = Color.Red
+            Chart3.Series(0).Points.Add(Label11.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "<60"
+            Chart3.Series(0).Points.Last.Color = Color.Yellow
+        ElseIf Label8.Text.ToString = 0 And Label9.Text.ToString = 0 And Label10.Text.ToString = 0 And Label11.Text.ToString <> 0 Then
+            Chart3.Series(0).Points.Add(Label11.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "<60"
+            Chart3.Series(0).Points.Last.Color = Color.Yellow
+        ElseIf Label8.Text.ToString = 0 And Label9.Text.ToString = 0 And Label10.Text.ToString <> 0 And Label11.Text.ToString = 0 Then
+           
+            Chart3.Series(0).Points.Add(Label10.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "60-75"
+            Chart3.Series(0).Points.Last.Color = Color.Red
+
+        ElseIf Label8.Text.ToString = 0 And Label9.Text.ToString = 0 And Label10.Text.ToString <> 0 And Label11.Text.ToString <> 0 Then
+           
+            Chart3.Series(0).Points.Add(Label10.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "60-75"
+            Chart3.Series(0).Points.Last.Color = Color.Red
+            Chart3.Series(0).Points.Add(Label11.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "<60"
+            Chart3.Series(0).Points.Last.Color = Color.Yellow
+        ElseIf Label8.Text.ToString = 0 And Label9.Text.ToString <> 0 And Label10.Text.ToString = 0 And Label11.Text.ToString = 0 Then
+
+            
+            Chart3.Series(0).Points.Add(Label9.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "75-80"
+            Chart3.Series(0).Points.Last.Color = Color.Green
+          
+
+        ElseIf Label8.Text.ToString = 0 And Label9.Text.ToString = 1 And Label10.Text.ToString = 0 And Label11.Text.ToString = 1 Then
+            Chart1.Series(1).Points.Add(Label9.Text.ToString)
+            Chart1.Series(1).Label = "75-80"
+            Chart1.Series(3).Points.Add(Label11.Text.ToString)
+            Chart1.Series(3).Label = "<60"
+
+        ElseIf Label8.Text.ToString = 0 And Label9.Text.ToString <> 0 And Label10.Text.ToString <> 0 And Label11.Text.ToString = 0 Then
+    
+            Chart3.Series(0).Points.Add(Label9.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "75-80"
+            Chart3.Series(0).Points.Last.Color = Color.Green
+            Chart3.Series(0).Points.Add(Label10.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "60-75"
+            Chart3.Series(0).Points.Last.Color = Color.Red
+ 
+        ElseIf Label8.Text.ToString = 0 And Label9.Text.ToString <> 0 And Label10.Text.ToString <> 0 And Label11.Text.ToString <> 0 Then
+            Chart1.Series(1).Points.Add(Label9.Text.ToString)
+            Chart1.Series(1).Label = "75-80"
+            Chart1.Series(2).Points.Add(Label10.Text.ToString)
+            Chart1.Series(2).Label = "60-75"
+            Chart1.Series(3).Points.Add(Label11.Text.ToString)
+            Chart1.Series(3).Label = "<60"
+        ElseIf Label8.Text.ToString <> 0 And Label9.Text.ToString = 0 And Label10.Text.ToString = 0 And Label11.Text.ToString = 0 Then
+            Chart3.Series(0).Points.Add(Label8.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = ">80"
+            Chart3.Series(0).Points.Last.Color = Color.Blue
+            
+
+        ElseIf Label8.Text.ToString <> 0 And Label9.Text.ToString = 0 And Label10.Text.ToString = 0 And Label11.Text.ToString <> 0 Then
+            Chart3.Series(0).Points.Add(Label8.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = ">80"
+            Chart3.Series(0).Points.Last.Color = Color.Blue
+            Chart3.Series(0).Points.Add(Label11.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "<60"
+            Chart3.Series(0).Points.Last.Color = Color.Yellow
+        ElseIf Label8.Text.ToString <> 0 And Label9.Text.ToString = 0 And Label10.Text.ToString <> 0 And Label11.Text.ToString = 0 Then
+            Chart3.Series(0).Points.Add(Label8.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = ">80"
+            Chart3.Series(0).Points.Last.Color = Color.Blue
+            Chart3.Series(0).Points.Add(Label10.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "60-75"
+            Chart3.Series(0).Points.Last.Color = Color.Red
+          
+        ElseIf Label8.Text.ToString <> 0 And Label9.Text.ToString = 0 And Label10.Text.ToString <> 0 And Label11.Text.ToString <> 0 Then
+            Chart3.Series(0).Points.Add(Label8.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = ">80"
+            Chart3.Series(0).Points.Last.Color = Color.Blue
+            Chart3.Series(0).Points.Add(Label10.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "60-75"
+            Chart3.Series(0).Points.Last.Color = Color.Red
+            Chart3.Series(0).Points.Add(Label11.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "<60"
+            Chart3.Series(0).Points.Last.Color = Color.Yellow
+        ElseIf Label8.Text.ToString <> 0 And Label9.Text.ToString <> 0 And Label10.Text.ToString = 0 And Label11.Text.ToString = 0 Then
+            Chart3.Series(0).Points.Add(Label8.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = ">80"
+            Chart3.Series(0).Points.Last.Color = Color.Blue
+            Chart3.Series(0).Points.Add(Label9.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "75-80"
+            Chart3.Series(0).Points.Last.Color = Color.Green
+            Chart3.Series(0).Points.Add(Label10.Text.ToString)
+            '
+        ElseIf Label8.Text.ToString <> 0 And Label9.Text.ToString <> 0 And Label10.Text.ToString = 0 And Label11.Text.ToString <> 0 Then
+            Chart3.Series(0).Points.Add(Label8.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = ">80"
+            Chart3.Series(0).Points.Last.Color = Color.Blue
+            Chart3.Series(0).Points.Add(Label9.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "75-80"
+            Chart3.Series(0).Points.Last.Color = Color.Green
+            Chart3.Series(0).Points.Add(Label11.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "<60"
+            Chart3.Series(0).Points.Last.Color = Color.Yellow
+            '
+        ElseIf Label8.Text.ToString <> 0 And Label9.Text.ToString <> 0 And Label10.Text.ToString <> 0 And Label11.Text.ToString = 0 Then
+            Chart3.Series(0).Points.Add(Label8.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = ">80"
+            Chart3.Series(0).Points.Last.Color = Color.Blue
+            Chart3.Series(0).Points.Add(Label9.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "75-80"
+            Chart3.Series(0).Points.Last.Color = Color.Green
+            Chart3.Series(0).Points.Add(Label10.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "60-75"
+            Chart3.Series(0).Points.Last.Color = Color.Red
+
+        ElseIf Label8.Text.ToString <> 0 And Label9.Text.ToString <> 0 And Label10.Text.ToString <> 0 And Label11.Text.ToString <> 0 Then
+            Chart3.Series(0).Points.Add(Label8.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = ">80"
+            Chart3.Series(0).Points.Last.Color = Color.Blue
+
+
+            Chart3.Series(0).Points.Add(Label9.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "75-80"
+            Chart3.Series(0).Points.Last.Color = Color.Green
+            Chart3.Series(0).Points.Add(Label10.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "60-75"
+            Chart3.Series(0).Points.Last.Color = Color.Red
+            Chart3.Series(0).Points.Add(Label11.Text.ToString)
+            Chart3.Series(0).Points.Last.Label = "<60"
+            Chart3.Series(0).Points.Last.Color = Color.Yellow
+        End If
         Button1.Enabled = False
     End Sub
 
@@ -173,4 +332,11 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
         Chart4.Series(0).Points.Last.Label = "FAILED"
         Chart4.Series(0).Points.Last.Color = Color.Red
     End Sub
+
+  
+    Private Sub Chart5_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+  
 End Class
