@@ -9,6 +9,7 @@ Public Class Form2
     Dim dept As String
     Public Pass As Integer = 0
     Public Fail As Integer = 0
+   
     Dim studcount As Integer = 0
     Dim minsub() As Integer
     Dim maxsub() As Integer
@@ -109,6 +110,8 @@ skip:   Label10.Text = j.ToString
     End Sub
     Public Sub CleanData(ByVal count As Integer)
         Dim k As Integer = 0
+        Dim parray(10) As Integer
+        Dim farray(10) As Integer
 
         For i = 0 To count - 1 Step 1
             k = Studobjects(i).temp.IndexOf("Card")
@@ -327,6 +330,24 @@ step1:      Dim j As Integer = Studobjects(i).temp.IndexOf(dept)
             avgsub(z) = (sumsub(z) / studcount)
         Next
 
+        For z = 0 To Studobjects(0).Subject.Length Step 1
+            For k = 0 To studcount - 1 Step 1
+                If Studobjects(k).SubjectT(z) < 40 Then
+                    farray(z) = farray(z) + 1
+
+                End If
+            Next
+        Next
+
+        For z = 0 To Studobjects(0).Subject.Length Step 1
+            For k = 0 To studcount - 1 Step 1
+                If Studobjects(k).SubjectT(z) >= 40 Then
+                    parray(z) = parray(z) + 1
+
+                End If
+            Next
+        Next
+
         Label40.Text = Studobjects(0).Subject(0)
         Label41.Text = Studobjects(0).Subject(1)
         Label42.Text = Studobjects(0).Subject(2)
@@ -371,6 +392,27 @@ step1:      Dim j As Integer = Studobjects(i).temp.IndexOf(dept)
         Label59.Text = avgsub(5)
         Label58.Text = avgsub(6)
         Label57.Text = avgsub(7)
+
+        Label84.Text = farray(0)
+        Label83.Text = farray(1)
+        Label82.Text = farray(2)
+        Label81.Text = farray(3)
+        Label80.Text = farray(4)
+        Label79.Text = farray(5)
+        Label78.Text = farray(6)
+        Label77.Text = farray(7)
+
+        Label75.Text = parray(0)
+        Label74.Text = parray(1)
+        Label73.Text = parray(2)
+        Label72.Text = parray(3)
+        Label71.Text = parray(4)
+        Label70.Text = parray(5)
+        Label69.Text = parray(6)
+        Label68.Text = parray(7)
+
+
+
 
         Browsebtn.Enabled = False
         Button2.Enabled = True
