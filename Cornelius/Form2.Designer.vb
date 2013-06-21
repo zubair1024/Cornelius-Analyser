@@ -100,6 +100,24 @@ Partial Class Form2
         Me.Button3 = New System.Windows.Forms.Button()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label68 = New System.Windows.Forms.Label()
+        Me.Label69 = New System.Windows.Forms.Label()
+        Me.Label70 = New System.Windows.Forms.Label()
+        Me.Label71 = New System.Windows.Forms.Label()
+        Me.Label72 = New System.Windows.Forms.Label()
+        Me.Label73 = New System.Windows.Forms.Label()
+        Me.Label74 = New System.Windows.Forms.Label()
+        Me.Label75 = New System.Windows.Forms.Label()
+        Me.Label76 = New System.Windows.Forms.Label()
+        Me.Label77 = New System.Windows.Forms.Label()
+        Me.Label78 = New System.Windows.Forms.Label()
+        Me.Label79 = New System.Windows.Forms.Label()
+        Me.Label80 = New System.Windows.Forms.Label()
+        Me.Label81 = New System.Windows.Forms.Label()
+        Me.Label82 = New System.Windows.Forms.Label()
+        Me.Label83 = New System.Windows.Forms.Label()
+        Me.Label84 = New System.Windows.Forms.Label()
+        Me.Label85 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -207,16 +225,16 @@ Partial Class Form2
         '
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 20
-        Me.ListBox1.Location = New System.Drawing.Point(26, 601)
+        Me.ListBox1.Location = New System.Drawing.Point(26, 681)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.ScrollAlwaysVisible = True
-        Me.ListBox1.Size = New System.Drawing.Size(241, 324)
+        Me.ListBox1.Size = New System.Drawing.Size(241, 224)
         Me.ListBox1.TabIndex = 12
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(22, 577)
+        Me.Label9.Location = New System.Drawing.Point(22, 660)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(88, 20)
         Me.Label9.TabIndex = 13
@@ -786,6 +804,168 @@ Partial Class Form2
         Me.Button4.Text = "ABOUT"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'Label68
+        '
+        Me.Label68.AutoSize = True
+        Me.Label68.Location = New System.Drawing.Point(925, 574)
+        Me.Label68.Name = "Label68"
+        Me.Label68.Size = New System.Drawing.Size(14, 20)
+        Me.Label68.TabIndex = 86
+        Me.Label68.Text = "-"
+        '
+        'Label69
+        '
+        Me.Label69.AutoSize = True
+        Me.Label69.Location = New System.Drawing.Point(812, 574)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(14, 20)
+        Me.Label69.TabIndex = 85
+        Me.Label69.Text = "-"
+        '
+        'Label70
+        '
+        Me.Label70.AutoSize = True
+        Me.Label70.Location = New System.Drawing.Point(708, 574)
+        Me.Label70.Name = "Label70"
+        Me.Label70.Size = New System.Drawing.Size(14, 20)
+        Me.Label70.TabIndex = 84
+        Me.Label70.Text = "-"
+        '
+        'Label71
+        '
+        Me.Label71.AutoSize = True
+        Me.Label71.Location = New System.Drawing.Point(606, 574)
+        Me.Label71.Name = "Label71"
+        Me.Label71.Size = New System.Drawing.Size(14, 20)
+        Me.Label71.TabIndex = 83
+        Me.Label71.Text = "-"
+        '
+        'Label72
+        '
+        Me.Label72.AutoSize = True
+        Me.Label72.Location = New System.Drawing.Point(503, 574)
+        Me.Label72.Name = "Label72"
+        Me.Label72.Size = New System.Drawing.Size(14, 20)
+        Me.Label72.TabIndex = 82
+        Me.Label72.Text = "-"
+        '
+        'Label73
+        '
+        Me.Label73.AutoSize = True
+        Me.Label73.Location = New System.Drawing.Point(415, 574)
+        Me.Label73.Name = "Label73"
+        Me.Label73.Size = New System.Drawing.Size(14, 20)
+        Me.Label73.TabIndex = 81
+        Me.Label73.Text = "-"
+        '
+        'Label74
+        '
+        Me.Label74.AutoSize = True
+        Me.Label74.Location = New System.Drawing.Point(329, 574)
+        Me.Label74.Name = "Label74"
+        Me.Label74.Size = New System.Drawing.Size(14, 20)
+        Me.Label74.TabIndex = 80
+        Me.Label74.Text = "-"
+        '
+        'Label75
+        '
+        Me.Label75.AutoSize = True
+        Me.Label75.Location = New System.Drawing.Point(240, 574)
+        Me.Label75.Name = "Label75"
+        Me.Label75.Size = New System.Drawing.Size(14, 20)
+        Me.Label75.TabIndex = 79
+        Me.Label75.Text = "-"
+        '
+        'Label76
+        '
+        Me.Label76.AutoSize = True
+        Me.Label76.Location = New System.Drawing.Point(150, 574)
+        Me.Label76.Name = "Label76"
+        Me.Label76.Size = New System.Drawing.Size(70, 20)
+        Me.Label76.TabIndex = 78
+        Me.Label76.Text = "Passed :"
+        '
+        'Label77
+        '
+        Me.Label77.AutoSize = True
+        Me.Label77.Location = New System.Drawing.Point(925, 607)
+        Me.Label77.Name = "Label77"
+        Me.Label77.Size = New System.Drawing.Size(14, 20)
+        Me.Label77.TabIndex = 95
+        Me.Label77.Text = "-"
+        '
+        'Label78
+        '
+        Me.Label78.AutoSize = True
+        Me.Label78.Location = New System.Drawing.Point(812, 607)
+        Me.Label78.Name = "Label78"
+        Me.Label78.Size = New System.Drawing.Size(14, 20)
+        Me.Label78.TabIndex = 94
+        Me.Label78.Text = "-"
+        '
+        'Label79
+        '
+        Me.Label79.AutoSize = True
+        Me.Label79.Location = New System.Drawing.Point(708, 607)
+        Me.Label79.Name = "Label79"
+        Me.Label79.Size = New System.Drawing.Size(14, 20)
+        Me.Label79.TabIndex = 93
+        Me.Label79.Text = "-"
+        '
+        'Label80
+        '
+        Me.Label80.AutoSize = True
+        Me.Label80.Location = New System.Drawing.Point(606, 607)
+        Me.Label80.Name = "Label80"
+        Me.Label80.Size = New System.Drawing.Size(14, 20)
+        Me.Label80.TabIndex = 92
+        Me.Label80.Text = "-"
+        '
+        'Label81
+        '
+        Me.Label81.AutoSize = True
+        Me.Label81.Location = New System.Drawing.Point(503, 607)
+        Me.Label81.Name = "Label81"
+        Me.Label81.Size = New System.Drawing.Size(14, 20)
+        Me.Label81.TabIndex = 91
+        Me.Label81.Text = "-"
+        '
+        'Label82
+        '
+        Me.Label82.AutoSize = True
+        Me.Label82.Location = New System.Drawing.Point(415, 607)
+        Me.Label82.Name = "Label82"
+        Me.Label82.Size = New System.Drawing.Size(14, 20)
+        Me.Label82.TabIndex = 90
+        Me.Label82.Text = "-"
+        '
+        'Label83
+        '
+        Me.Label83.AutoSize = True
+        Me.Label83.Location = New System.Drawing.Point(329, 607)
+        Me.Label83.Name = "Label83"
+        Me.Label83.Size = New System.Drawing.Size(14, 20)
+        Me.Label83.TabIndex = 89
+        Me.Label83.Text = "-"
+        '
+        'Label84
+        '
+        Me.Label84.AutoSize = True
+        Me.Label84.Location = New System.Drawing.Point(240, 607)
+        Me.Label84.Name = "Label84"
+        Me.Label84.Size = New System.Drawing.Size(14, 20)
+        Me.Label84.TabIndex = 88
+        Me.Label84.Text = "-"
+        '
+        'Label85
+        '
+        Me.Label85.AutoSize = True
+        Me.Label85.Location = New System.Drawing.Point(160, 607)
+        Me.Label85.Name = "Label85"
+        Me.Label85.Size = New System.Drawing.Size(60, 20)
+        Me.Label85.TabIndex = 87
+        Me.Label85.Text = "Failed :"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -795,6 +975,24 @@ Partial Class Form2
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.ClientSize = New System.Drawing.Size(1042, 628)
+        Me.Controls.Add(Me.Label77)
+        Me.Controls.Add(Me.Label78)
+        Me.Controls.Add(Me.Label79)
+        Me.Controls.Add(Me.Label80)
+        Me.Controls.Add(Me.Label81)
+        Me.Controls.Add(Me.Label82)
+        Me.Controls.Add(Me.Label83)
+        Me.Controls.Add(Me.Label84)
+        Me.Controls.Add(Me.Label85)
+        Me.Controls.Add(Me.Label68)
+        Me.Controls.Add(Me.Label69)
+        Me.Controls.Add(Me.Label70)
+        Me.Controls.Add(Me.Label71)
+        Me.Controls.Add(Me.Label72)
+        Me.Controls.Add(Me.Label73)
+        Me.Controls.Add(Me.Label74)
+        Me.Controls.Add(Me.Label75)
+        Me.Controls.Add(Me.Label76)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label66)
@@ -957,4 +1155,22 @@ Partial Class Form2
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
     Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Label68 As System.Windows.Forms.Label
+    Friend WithEvents Label69 As System.Windows.Forms.Label
+    Friend WithEvents Label70 As System.Windows.Forms.Label
+    Friend WithEvents Label71 As System.Windows.Forms.Label
+    Friend WithEvents Label72 As System.Windows.Forms.Label
+    Friend WithEvents Label73 As System.Windows.Forms.Label
+    Friend WithEvents Label74 As System.Windows.Forms.Label
+    Friend WithEvents Label75 As System.Windows.Forms.Label
+    Friend WithEvents Label76 As System.Windows.Forms.Label
+    Friend WithEvents Label77 As System.Windows.Forms.Label
+    Friend WithEvents Label78 As System.Windows.Forms.Label
+    Friend WithEvents Label79 As System.Windows.Forms.Label
+    Friend WithEvents Label80 As System.Windows.Forms.Label
+    Friend WithEvents Label81 As System.Windows.Forms.Label
+    Friend WithEvents Label82 As System.Windows.Forms.Label
+    Friend WithEvents Label83 As System.Windows.Forms.Label
+    Friend WithEvents Label84 As System.Windows.Forms.Label
+    Friend WithEvents Label85 As System.Windows.Forms.Label
 End Class

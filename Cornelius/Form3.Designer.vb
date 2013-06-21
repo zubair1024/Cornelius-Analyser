@@ -34,6 +34,11 @@ Partial Class Form3
         Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Series9 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series10 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series11 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series12 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -58,10 +63,34 @@ Partial Class Form3
         Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Chart3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Chart4 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Chart5 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label66 = New System.Windows.Forms.Label()
+        Me.Label67 = New System.Windows.Forms.Label()
+        Me.Label54 = New System.Windows.Forms.Label()
+        Me.Label55 = New System.Windows.Forms.Label()
+        Me.Label56 = New System.Windows.Forms.Label()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label53 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Chart5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -321,11 +350,261 @@ Partial Class Form3
         Me.Chart4.TabIndex = 52
         Me.Chart4.Text = "Chart4"
         '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 20
+        Me.ListBox1.Location = New System.Drawing.Point(15, 737)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.ScrollAlwaysVisible = True
+        Me.ListBox1.Size = New System.Drawing.Size(455, 224)
+        Me.ListBox1.TabIndex = 53
+        '
+        'Chart5
+        '
+        Me.Chart5.BackColor = System.Drawing.Color.Transparent
+        ChartArea5.Name = "ChartArea1"
+        Me.Chart5.ChartAreas.Add(ChartArea5)
+        Me.Chart5.Location = New System.Drawing.Point(1009, 697)
+        Me.Chart5.Name = "Chart5"
+        Series9.ChartArea = "ChartArea1"
+        Series9.Color = System.Drawing.Color.Blue
+        Series9.Name = "Series1"
+        Series10.ChartArea = "ChartArea1"
+        Series10.Color = System.Drawing.Color.Green
+        Series10.Name = "Series2"
+        Series11.ChartArea = "ChartArea1"
+        Series11.Color = System.Drawing.Color.Red
+        Series11.Name = "Series3"
+        Series12.ChartArea = "ChartArea1"
+        Series12.Color = System.Drawing.Color.Yellow
+        Series12.Name = "Series4"
+        Me.Chart5.Series.Add(Series9)
+        Me.Chart5.Series.Add(Series10)
+        Me.Chart5.Series.Add(Series11)
+        Me.Chart5.Series.Add(Series12)
+        Me.Chart5.Size = New System.Drawing.Size(493, 300)
+        Me.Chart5.TabIndex = 54
+        Me.Chart5.Text = "Chart5"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(11, 714)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(144, 20)
+        Me.Label16.TabIndex = 55
+        Me.Label16.Text = "Individual Student :"
+        '
+        'Label66
+        '
+        Me.Label66.AutoSize = True
+        Me.Label66.Location = New System.Drawing.Point(867, 891)
+        Me.Label66.Name = "Label66"
+        Me.Label66.Size = New System.Drawing.Size(14, 20)
+        Me.Label66.TabIndex = 95
+        Me.Label66.Text = "-"
+        '
+        'Label67
+        '
+        Me.Label67.AutoSize = True
+        Me.Label67.Location = New System.Drawing.Point(867, 858)
+        Me.Label67.Name = "Label67"
+        Me.Label67.Size = New System.Drawing.Size(14, 20)
+        Me.Label67.TabIndex = 94
+        Me.Label67.Text = "-"
+        '
+        'Label54
+        '
+        Me.Label54.AutoSize = True
+        Me.Label54.Location = New System.Drawing.Point(698, 891)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(14, 20)
+        Me.Label54.TabIndex = 93
+        Me.Label54.Text = "-"
+        '
+        'Label55
+        '
+        Me.Label55.AutoSize = True
+        Me.Label55.Location = New System.Drawing.Point(609, 891)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(14, 20)
+        Me.Label55.TabIndex = 92
+        Me.Label55.Text = "-"
+        '
+        'Label56
+        '
+        Me.Label56.AutoSize = True
+        Me.Label56.Location = New System.Drawing.Point(520, 891)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(14, 20)
+        Me.Label56.TabIndex = 91
+        Me.Label56.Text = "-"
+        '
+        'Label48
+        '
+        Me.Label48.AutoSize = True
+        Me.Label48.Location = New System.Drawing.Point(958, 810)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(14, 20)
+        Me.Label48.TabIndex = 90
+        Me.Label48.Text = "-"
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Location = New System.Drawing.Point(866, 810)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(14, 20)
+        Me.Label49.TabIndex = 89
+        Me.Label49.Text = "-"
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Location = New System.Drawing.Point(780, 810)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(14, 20)
+        Me.Label50.TabIndex = 88
+        Me.Label50.Text = "-"
+        '
+        'Label51
+        '
+        Me.Label51.AutoSize = True
+        Me.Label51.Location = New System.Drawing.Point(698, 810)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(14, 20)
+        Me.Label51.TabIndex = 87
+        Me.Label51.Text = "-"
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.Location = New System.Drawing.Point(609, 810)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(14, 20)
+        Me.Label52.TabIndex = 86
+        Me.Label52.Text = "-"
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.Location = New System.Drawing.Point(520, 810)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(14, 20)
+        Me.Label53.TabIndex = 85
+        Me.Label53.Text = "-"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(698, 858)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(14, 20)
+        Me.Label39.TabIndex = 84
+        Me.Label39.Text = "-"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Location = New System.Drawing.Point(609, 858)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(14, 20)
+        Me.Label38.TabIndex = 83
+        Me.Label38.Text = "-"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(520, 858)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(14, 20)
+        Me.Label37.TabIndex = 82
+        Me.Label37.Text = "-"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(958, 775)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(14, 20)
+        Me.Label36.TabIndex = 81
+        Me.Label36.Text = "-"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(866, 775)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(14, 20)
+        Me.Label35.TabIndex = 80
+        Me.Label35.Text = "-"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(780, 775)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(14, 20)
+        Me.Label34.TabIndex = 79
+        Me.Label34.Text = "-"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Location = New System.Drawing.Point(698, 775)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(14, 20)
+        Me.Label33.TabIndex = 78
+        Me.Label33.Text = "-"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Location = New System.Drawing.Point(609, 775)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(14, 20)
+        Me.Label32.TabIndex = 77
+        Me.Label32.Text = "-"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(520, 775)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(14, 20)
+        Me.Label31.TabIndex = 76
+        Me.Label31.Text = "-"
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1547, 1038)
+        Me.AutoScroll = True
+        Me.ClientSize = New System.Drawing.Size(1726, 1050)
+        Me.Controls.Add(Me.Label66)
+        Me.Controls.Add(Me.Label67)
+        Me.Controls.Add(Me.Label54)
+        Me.Controls.Add(Me.Label55)
+        Me.Controls.Add(Me.Label56)
+        Me.Controls.Add(Me.Label48)
+        Me.Controls.Add(Me.Label49)
+        Me.Controls.Add(Me.Label50)
+        Me.Controls.Add(Me.Label51)
+        Me.Controls.Add(Me.Label52)
+        Me.Controls.Add(Me.Label53)
+        Me.Controls.Add(Me.Label39)
+        Me.Controls.Add(Me.Label38)
+        Me.Controls.Add(Me.Label37)
+        Me.Controls.Add(Me.Label36)
+        Me.Controls.Add(Me.Label35)
+        Me.Controls.Add(Me.Label34)
+        Me.Controls.Add(Me.Label33)
+        Me.Controls.Add(Me.Label32)
+        Me.Controls.Add(Me.Label31)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Chart5)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Chart4)
         Me.Controls.Add(Me.Chart3)
         Me.Controls.Add(Me.Chart2)
@@ -356,6 +635,7 @@ Partial Class Form3
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Chart3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Chart4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Chart5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -384,4 +664,27 @@ Partial Class Form3
     Friend WithEvents Chart2 As System.Windows.Forms.DataVisualization.Charting.Chart
     Friend WithEvents Chart3 As System.Windows.Forms.DataVisualization.Charting.Chart
     Friend WithEvents Chart4 As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
+    Friend WithEvents Chart5 As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Label66 As System.Windows.Forms.Label
+    Friend WithEvents Label67 As System.Windows.Forms.Label
+    Friend WithEvents Label54 As System.Windows.Forms.Label
+    Friend WithEvents Label55 As System.Windows.Forms.Label
+    Friend WithEvents Label56 As System.Windows.Forms.Label
+    Friend WithEvents Label48 As System.Windows.Forms.Label
+    Friend WithEvents Label49 As System.Windows.Forms.Label
+    Friend WithEvents Label50 As System.Windows.Forms.Label
+    Friend WithEvents Label51 As System.Windows.Forms.Label
+    Friend WithEvents Label52 As System.Windows.Forms.Label
+    Friend WithEvents Label53 As System.Windows.Forms.Label
+    Friend WithEvents Label39 As System.Windows.Forms.Label
+    Friend WithEvents Label38 As System.Windows.Forms.Label
+    Friend WithEvents Label37 As System.Windows.Forms.Label
+    Friend WithEvents Label36 As System.Windows.Forms.Label
+    Friend WithEvents Label35 As System.Windows.Forms.Label
+    Friend WithEvents Label34 As System.Windows.Forms.Label
+    Friend WithEvents Label33 As System.Windows.Forms.Label
+    Friend WithEvents Label32 As System.Windows.Forms.Label
+    Friend WithEvents Label31 As System.Windows.Forms.Label
 End Class

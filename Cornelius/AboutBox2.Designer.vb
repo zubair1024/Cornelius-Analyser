@@ -168,7 +168,7 @@ Partial Class AboutBox2
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "AboutBox2"
-        Me.Padding = New System.Windows.Forms.Padding(14, 14, 14, 14)
+        Me.Padding = New System.Windows.Forms.Padding(14)
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "About : Cornelius"
