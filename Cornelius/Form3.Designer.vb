@@ -365,7 +365,7 @@ Partial Class Form3
         Me.Chart5.BackColor = System.Drawing.Color.Transparent
         ChartArea5.Name = "ChartArea1"
         Me.Chart5.ChartAreas.Add(ChartArea5)
-        Me.Chart5.Location = New System.Drawing.Point(1009, 697)
+        Me.Chart5.Location = New System.Drawing.Point(1009, 681)
         Me.Chart5.Name = "Chart5"
         Series9.ChartArea = "ChartArea1"
         Series9.Color = System.Drawing.Color.Blue
@@ -383,7 +383,7 @@ Partial Class Form3
         Me.Chart5.Series.Add(Series10)
         Me.Chart5.Series.Add(Series11)
         Me.Chart5.Series.Add(Series12)
-        Me.Chart5.Size = New System.Drawing.Size(493, 300)
+        Me.Chart5.Size = New System.Drawing.Size(713, 364)
         Me.Chart5.TabIndex = 54
         Me.Chart5.Text = "Chart5"
         '

@@ -1,7 +1,7 @@
 ﻿
 Public Class Form3
     Dim count1 As Integer = 0
-    Dim Studobjects(200) As studentobject
+    Dim Studobjects(200) As Form2.studentobject
     Dim indexx As Integer = -1
     Dim studcount As Integer = 0
 
@@ -37,22 +37,34 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
         Next
         Return
     End Sub
-    Public Structure studentobject
-        Dim rollno As String
-        Dim sname As String
-        Dim temp As String
-        Dim Subject() As String
-        Dim SubjectC() As String
-        Dim SubjectA() As String
-        Dim SubjectE() As String
-        Dim SubjectT() As String
-        Dim Aggregate As String
-        Dim TPercent As String
-        Dim Result As String
-        Dim scount As Integer
+    Function copystdobjects(oldstd() As Form2.studentobject)
+        For cpcount As Integer = 0 To 199
+            Studobjects(cpcount).sname = oldstd(cpcount).sname
+            Studobjects(cpcount).rollno = oldstd(cpcount).rollno
+            Studobjects(cpcount).temp = oldstd(cpcount).temp
+            Studobjects(cpcount).Aggregate = oldstd(cpcount).Aggregate
+            Studobjects(cpcount).TPercent = oldstd(cpcount).TPercent
+            Studobjects(cpcount).Result = oldstd(cpcount).Result
+            Studobjects(cpcount).scount = oldstd(cpcount).scount
+            ReDim Studobjects(cpcount).Subject(oldstd(cpcount).scount)
+            ReDim Studobjects(cpcount).SubjectC(oldstd(cpcount).scount)
+            ReDim Studobjects(cpcount).SubjectA(oldstd(cpcount).scount)
+            ReDim Studobjects(cpcount).SubjectE(oldstd(cpcount).scount)
+            ReDim Studobjects(cpcount).SubjectT(oldstd(cpcount).scount)
+
+            For cpcounts As Integer = 0 To oldstd(cpcount).scount - 1
+                Studobjects(cpcount).Subject(cpcounts) = oldstd(cpcount).Subject(cpcounts)
+                Studobjects(cpcount).SubjectC(cpcounts) = oldstd(cpcount).SubjectC(cpcounts)
+                Studobjects(cpcount).SubjectA(cpcounts) = oldstd(cpcount).SubjectA(cpcounts)
+                Studobjects(cpcount).SubjectE(cpcounts) = oldstd(cpcount).SubjectE(cpcounts)
+                Studobjects(cpcount).SubjectT(cpcounts) = oldstd(cpcount).SubjectT(cpcounts)
 
 
-    End Structure
+            Next
+
+        Next
+   
+    End Function
     Public Sub New()
 
         ' This call is required by the designer.
@@ -61,7 +73,7 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
-    Public Sub New(ByVal Studobjects() As Form2.studentobject, ByVal studcount As Integer)
+    Public Sub New(ByVal Studobjects1() As Form2.studentobject, ByVal studcount As Integer)
 
         InitializeComponent()
 
@@ -69,19 +81,20 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
 
 
         For loopy = 0 To studcount - 1 Step 1
-            If Studobjects(loopy).TPercent > 80 Then
+            If Studobjects1(loopy).TPercent > 80 Then
                 count1 = count1 + 1
-            ElseIf Studobjects(loopy).TPercent > 75 And Studobjects(loopy).TPercent <= 80 Then
+            ElseIf Studobjects1(loopy).TPercent > 75 And Studobjects1(loopy).TPercent <= 80 Then
                 count2 = count2 + 1
-            ElseIf Studobjects(loopy).TPercent > 60 And Studobjects(loopy).TPercent <= 75 Then
+            ElseIf Studobjects1(loopy).TPercent > 60 And Studobjects1(loopy).TPercent <= 75 Then
                 count3 = count3 + 1
-            ElseIf Studobjects(loopy).TPercent <= 60 Then
+            ElseIf Studobjects1(loopy).TPercent <= 60 Then
                 count4 = count4 + 1
             End If
         Next
-        ' For k = 0 To studcount - 1 Step 1
-        'ListBox1.Items.Add(Studobjects(k).sname)
-        'Next
+        copystdobjects(Studobjects1)
+        For k = 0 To studcount - 1 Step 1
+            ListBox1.Items.Add(Studobjects1(k).sname)
+        Next
         ' For k = 0 To studcount - 1 Step 1
         'Tper(k) = Studobjects(k).TPercent
         'cc = k + 1
@@ -124,6 +137,7 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
         For k = 0 To studcount - 1 Step 1
             ListBox1.Items.Add(Studobjects(k).sname)
         Next
+
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
@@ -356,12 +370,13 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
         Dim D As Integer = 0
         Dim no As Integer = 0
 
+
         'To empty the chart
         '    For Each z As DataVisualization.Charting.ChartElementCollection(Of String) In Chart5.Series
         'z.Dispose()
         ' Next
 
-        Me.Chart5.Series.Clear()
+        Me.Chart5.Series(0).Points.Clear()
 
 
 
@@ -393,6 +408,7 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
             PF = 1
             Label53.ForeColor = Color.Red
             Label53.Text = Studobjects(indexx).SubjectT(0) + "*"
+
         End If
         Label52.Text = Studobjects(indexx).SubjectT(1)
         If Studobjects(indexx).SubjectT(1) < 40 Then
@@ -456,57 +472,64 @@ ByVal surface As Graphics, ByVal location As Point, ByVal pieSize As Size)
             Label54.Text = Studobjects(indexx).TPercent + "%"
         End If
 
-        If Label53.Text.ToString > 0 Then
-            Chart5.Series(0).Points.Add(Label53.Text.ToString)
-            Chart5.Series(0).Points.Last.Label = "FAILED"
-            Chart5.Series(0).Points.Last.Color = Color.LightGray
+        'If Label53.Text.ToString > 0 Then
+        'Chart5.Series(0).Points.Add(Label53.Text.ToString)
+        'Chart5.Series(0).Points.Last.Label =
+        'Chart5.Series(0).Points.Last.Color = Color.LightGray
 
-        End If
-        If Label53.Text.ToString > 0 Then
-            Chart5.Series(0).Points.Add(Label14.Text.ToString)
+        'End If
+        If Studobjects(indexx).SubjectT(0) > 0 Then
+            Chart5.Series(0).Points.Add(Studobjects(indexx).SubjectT(0))
             Chart5.Series(0).Points.Last.Label = Studobjects(0).Subject(0)
             Chart5.Series(0).Points.Last.Color = Color.LightBlue
         End If
-        If Label53.Text.ToString > 0 Then
-            Chart5.Series(0).Points.Add(Label14.Text.ToString)
+        If Studobjects(indexx).SubjectT(1) > 0 Then
+            Chart5.Series(0).Points.Add(Studobjects(indexx).SubjectT(1))
             Chart5.Series(0).Points.Last.Label = Studobjects(0).Subject(1)
             Chart5.Series(0).Points.Last.Color = Color.LightGoldenrodYellow
 
         End If
-        If Label53.Text.ToString > 0 Then
-            Chart5.Series(0).Points.Add(Label14.Text.ToString)
+        If Studobjects(indexx).SubjectT(2) > 0 Then
+            Chart5.Series(0).Points.Add(Studobjects(indexx).SubjectT(2))
             Chart5.Series(0).Points.Last.Label = Studobjects(0).Subject(2)
             Chart5.Series(0).Points.Last.Color = Color.LightGreen
 
         End If
-        If Label53.Text.ToString > 0 Then
-            Chart5.Series(0).Points.Add(Label14.Text.ToString)
+        If Studobjects(indexx).SubjectT(3) > 0 Then
+            Chart5.Series(0).Points.Add(Studobjects(indexx).SubjectT(3))
             Chart5.Series(0).Points.Last.Label = Studobjects(0).Subject(3)
             Chart5.Series(0).Points.Last.Color = Color.LightPink
         End If
-        If Label53.Text.ToString > 0 Then
-            Chart5.Series(0).Points.Add(Label14.Text.ToString)
+        If Studobjects(indexx).SubjectT(4) > 0 Then
+            Chart5.Series(0).Points.Add(Studobjects(indexx).SubjectT(4))
             Chart5.Series(0).Points.Last.Label = Studobjects(0).Subject(4)
             Chart5.Series(0).Points.Last.Color = Color.LightSalmon
         End If
-        If Label53.Text.ToString > 0 Then
-            Chart5.Series(0).Points.Add(Label14.Text.ToString)
+        If Studobjects(indexx).SubjectT(5) > 0 Then
+            Chart5.Series(0).Points.Add(Studobjects(indexx).SubjectT(5))
             Chart5.Series(0).Points.Last.Label = Studobjects(0).Subject(5)
-            Chart5.Series(0).Points.Last.Color = Color.LightYellow
+            Chart5.Series(0).Points.Last.Color = Color.LightPink
 
         End If
-        If Label53.Text.ToString > 0 Then
-            Chart5.Series(0).Points.Add(Label14.Text.ToString)
+        If Studobjects(indexx).SubjectT(6) > 0 Then
+            Chart5.Series(0).Points.Add(Studobjects(indexx).SubjectT(6))
             Chart5.Series(0).Points.Last.Label = Studobjects(0).Subject(6)
+            Chart5.Series(0).Points.Last.Color = Color.Lime
+
+        End If
+
+        If Studobjects(indexx).SubjectT(7) > 0 Then
+            Chart5.Series(0).Points.Add(Studobjects(indexx).SubjectT(7))
+            Chart5.Series(0).Points.Last.Label = Studobjects(0).Subject(7)
             Chart5.Series(0).Points.Last.Color = Color.LimeGreen
 
         End If
-        If Label53.Text.ToString > 0 Then
-            Chart5.Series(0).Points.Add(Label14.Text.ToString)
-            Chart5.Series(0).Points.Last.Label = Studobjects(0).Subject(7)
-            Chart5.Series(0).Points.Last.Color = Color.LightSteelBlue
+        'If Label54.Text.ToString > 0 Then
+        'Chart5.Series(0).Points.Add(Label54.Text.ToString)
+        'Chart5.Series(0).Points.Last.Label = Studobjects(0).Subject(7)
+        'Chart5.Series(0).Points.Last.Color = Color.LightSteelBlue
 
-        End If
+        'End If
 
     End Sub
 End Class

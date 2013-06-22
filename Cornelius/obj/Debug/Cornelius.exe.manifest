@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cornelius.exe" size="480256">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cornelius.exe" size="480768">
       <assemblyIdentity name="Cornelius" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>80moe3+WdDlVrlpkII1bD6o5ewLlmPMjvM/Nu0ABCfA=</dsig:DigestValue>
+        <dsig:DigestValue>PcnIVdKik4WaowSxyVfrIr22A99qpTY5VUa4MQqiJVE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
